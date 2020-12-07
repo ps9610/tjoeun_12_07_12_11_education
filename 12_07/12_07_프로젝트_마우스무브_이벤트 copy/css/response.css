@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+/* 👇 화면 너비가 990px 이하면 사이드메뉴 첫번째 안 보이게 설정 */
+/* 모바일->pc = min-width / pc->모바일 = max-width = 내림차순 */
+
+@media all and (min-width:1024px) and (max-width:1600px){
+    #main #section06 .wrap .container > li .gap .content .small-box {width:80%;left:10%;}
+}
+
+@media all and (min-width:1200px) and (max-width:1600px) {
+    #main #section01 .hungry > img {width:75%;}
+}
+
+@media all and (max-width:1170px){
+    /* #main .section234 .wrap .gap {margin:0;} */
+}
+
+@media all and (max-width:1200px)/*990px이하 해상도 모두 가능*/ {
+    #header .wrap .gap .right #aside > div > span:nth-child(1) {display:none;}
+    #main #section01 .hungry > img {width:65%;}/* 양쪽에 여백생기게하려고 */
+    #main #section06 .wrap .container > li .gap .content .large-box .large-box-gap > ul > li > ul > li > div > p {line-height:120%;}
+
+    #main #section07 .wrap .container > ul > li {float:left;width:50%;}
+    
+
+    #main #section08 {padding:80px 0;}
+    #main #section08 .wrap {width:90%;}
+    #main #section08 .wrap .gap .container > ul > li {width:50%;padding-bottom:60px;}
+    #main #section08 .wrap .gap .container > ul > li:last-child {padding-bottom:0;}
+}
+
+@media all and (max-width:1200px) and (orientation:landscape) {
+    #header .wrap .gap .right #aside > div > span:nth-child(1) {display:none;}
+    #main #section01 .hungry > img {width:50%;}
+}
+
+@media all and (max-width:1200px) and (orientation:portrait) {
+    #header .wrap .gap .right #aside > div > span:nth-child(1) {display:none;}
+    #main #section01 .hungry > img {width:70%;}
+}
+
+@media all and (max-width:1024px){
+    #main #section05 {padding:80px 0;}
+    #main #section05 .wrap .title-wrap {padding-bottom:40px;}
+
+    #main #section05 .wrap .left-wrap, 
+    #main #section05 .wrap .right-wrap {width:80%;}
+    #main #section05 .wrap .right-wrap {width:77%;padding-top:50px;text-align:center;}
+    #main #section05 .wrap .right-wrap .gap > .content > h2 > br {display:none;}
+
+    #main #section06 {height:calc(740px*3);}
+    #main #section06 .wrap .container > li {float:none;width:100%;}
+    #main #section06 .wrap .container > li .gap .content .small-box {width:40%;left:30%;}
+    #main #section06 .wrap .container > li .gap .content .large-box {width:64%;left:18%;}
+
+    #main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box .left {float:none;margin:0 auto;}
+    #main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box .right {float:none;width:100%;text-align:center;}
+    #main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box .right .txt-wrap {margin-left:0;padding-top:20px;}
+    /* 이렇게 해도 슬라이드가 가운데로 오지 않으니까 JS를 사용해서 섹션 9의 메인 함수에 정해놓은 left값 975px 이하일 때 
+    그 때의 창 넓이에 따라 슬라이드 크기가 조절될 수 있게 코딩해주어야함 */
+    
+    #main #section10 .wrap .gap {margin:0;}
+    #main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box .right .txt-wrap > p {margin:0 auto;width:65%;}
+    #main #section10 .wrap .gap .container .slide-container .slide-view .arrow-next {margin-top:17.5px;width:50px;height:50px;}
+    #main #section10 .wrap .gap .container .slide-container .slide-view .arrow-next > a {line-height:25px;}
+    #main #section10 .wrap .gap .container .slide-container .slide-view .arrow-prev {margin-top:17.5px;width:50px;height:50px;}
+    #main #section10 .wrap .gap .container .slide-container .slide-view .arrow-prev > a {line-height:25px;}
+
+    #main  #section12 {padding:80px 0;}
+
+    #main #section13 {padding:80px 0;}
+    #main #section13 .wrap .gap .container > ul > li {float:left;width:50%;padding:30px 0;}
+    #main #section13 .wrap .gap .container > ul > li > div {border-right:1px solid #ddd;text-align:center;}
+    #main #section13 .wrap .gap .container > ul > li:nth-child(even) > div {border-right:0;}
+
+    #main  #section14 {padding:80px 0;}
+    }
+
+/*섹션14 : 900이하에서 왼쪽 아이콘이랑 글씨가 위로 올라감*/
+
+@media all and (max-width:991px){
+    #header .wrap .gap .left  #nav,
+    #header .wrap .gap .left .logo > i,
+    #header .wrap .gap .right #aside {display:none;}
+    #header .wrap .gap .right .mobile {display:block;}  
+
+    #main #section01,
+    #main #section02,
+    #main #section03,
+    #main #section04 {background-attachment:scroll}
+
+    
+    #main #section05 .wrap {width:80%;margin:0 auto;}
+    #main #section05 .wrap .left-wrap {float:none;width:100%}
+    #main #section05 .wrap .right-wrap {float:none;width:100%;}
+    #main #section05 .wrap .left-wrap {margin:0 auto};
+    #main #section05 .wrap .right-wrap {margin:0 auto};
+
+
+    #main #section01 .hungry > img {width:60%;}/* 1200px일 때보다 더 적게 */
+    
+}
+
+@media all and (max-width:991px) and (orientation:landscape){
+/* ㄴ>해상도가 991px이하이고 핸드폰 가로로 돌렸을 때 해당 */
+#main #section01 .hungry > img {width:40%;}
+}
+@media all and (max-width:991px) and (orientation:portrait){
+/* ㄴ>해상도가 991px이하이고 핸드폰 세로로 돌렸을 때 해당 */
+#main #section01 .hungry > img {width:70%;}
+}
+
+@media all and (max-width:900px){
+    #main #section11 .wrap .gap .container > ul > li {float:none;width:100%;margin:0 auto;}
+
+    #main  #section14 .wrap .gap .container > ul > li:first-child {float:none;width:100%;}
+    #main  #section14 .wrap .gap .container > ul > li:last-child {float:none;width:100%;}
+
+    #main  #section14 .wrap .gap .container {width:95%;margin:0 auto;}
+    #main  #section14 .wrap .gap .container > ul > li > div > ul > li {float:left;width:33.333333%;line-height:150%;}
+    #main  #section14 .wrap .gap .container > ul > li > div > ul > li .icon-wrap {width:30px;vertical-align:top;}
+    #main  #section14 .wrap .gap .container > ul > li > div > ul > li .icon-wrap span i {font-size:25px;}
+
+    #main  #section14 .wrap .gap .container > ul > li > div > ul > li .text-wrap {line-height:170%;}
+    #main  #section14 .wrap .gap .container > ul > li > div > ul > li .text-wrap h4 {padding-bottom:0;}
+    #main  #section14 .wrap .gap .container > ul > li > div > ul > li .text-wrap h5 {line-height:170%;}
+    #main  #section14 .wrap .gap .container > ul > li > div > ul > li .text-wrap h5 > br:first-child {display:block;}
+    
+}
+
+@media all and (max-width:760px){
+    #main #section09 {padding-top:70px}
+    #main #section09 .wrap .gap .container .content {padding-top:50px;}
+    #main #section09 .wrap .gap .container .content .gallery-nav {padding-bottom:30px;}
+    #main #section09 .wrap .gap .container .content .gallery-nav > ul > li {display:block;margin:0;padding-bottom:20px;}/* 좌우여백 필요없고 아래 여백만 필요함 */
+    #main #section09 .wrap .gap .container .content .gallery-nav > ul > li > a {display:inline-block;}
+
+    #main #section05 .wrap .title-wrap > h2 {font-size:24px;}
+    #main #section05 .wrap .right-wrap .gap > .content > h3 {font-size:14px;}
+    #main #section05 .wrap .right-wrap .gap > .content > h2 {font-size:28px;}
+
+    #main #section05 {padding:60px 0;}
+    #main #section05 .wrap .title-wrap {padding-bottom:30px;}
+
+    #main #section05 .wrap .left-wrap {width:100%;}
+    #main #section05 .wrap .right-wrap {width:90%;}
+
+    #main #section06 .wrap .container > li .gap .content .small-box {width:56%;left:22%;}
+    #main #section06 .wrap .container > li .gap .content .large-box {width:80%;left:10%;}
+
+    #main #section07 .wrap .container > ul > li {float:left;width:100%;}
+
+    #main #section08 {padding:60px 0;}
+    #main #section08 .wrap .gap .container > ul > li {width:100%;}
+
+    #main #section10 {padding:60px 0;}
+
+    #main #section11 {padding:60px 0;}
+
+    #main  #section12 {padding:60px 0;}
+
+    #main  #section13 {padding:60px 0;}
+
+    #main  #section14 {padding:60px 0;}
+
+    #main  #section14 .wrap .gap .container > ul > li > div > ul > li {float:none;width:100%;}
+    #main  #section14 .wrap .gap .container > ul > li > div > ul > li > div {display:block;text-align:center;}
+    #main  #section14 .wrap .gap .container > ul > li > div > ul > li .icon-wrap {width:100%;padding-bottom:15px;}/*넓이가 100%가 아니면 가운데로 갈 수가 없음*/
+    #main  #section14 .wrap .gap .container > ul > li > div > ul > li .icon-wrap span {display:inline-block;}
+    #main  #section14 .wrap .gap .container > ul > li > div > ul > li .icon-wrap span i {text-align:center;}
+
+    #main  #section14 .wrap .gap .container {padding-top:0;}
+    #main  #section14 .wrap .gap .container > ul > li > div > ul > li {padding-bottom:30px;}
+    #main  #section14 .wrap .gap .container > ul > li > div > ul > li .text-wrap h5 > br:first-child {display:none;}
+
+}
+
+@media all and (max-width:600px){
+
+#main #section07 .wrap .container > ul > li > div > div > p {line-height:140%;}
+}
+
+@media all and (max-width:500px){
+    #main #section05 .wrap .right-wrap .gap > .content > p {font-size:13px;line-height:150%;}
+    #main #section05 .wrap .right-wrap {width:100%;}
+
+    #main #section06 .wrap .container > li .gap .content .small-box {width:80%;left:10%;}
+    #main #section06 .wrap .container > li .gap .content .large-box {width:92%;left:4%;}
+
+    #main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box .right .txt-wrap > p {width:90%;line-height:140%;}
+
+    #main #section11 .wrap .gap .container > ul > li > div > ul > li {float:none;width:100%;}
+    #main #section11 .wrap .gap .container > ul > li > div > ul > li:nth-child(2):before {top:-15px;left:50%;margin-left:-15px;border-bottom:15px solid #fff;border-top:15px solid transparent;border-right:15px solid transparent;border-left:15px solid transparent;}
+
+    #main #section13 .wrap .gap .container > ul > li {float:none;width:100%;}
+    #main #section13 .wrap .gap .container > ul > li > div {border-right:0}
+
+
+}

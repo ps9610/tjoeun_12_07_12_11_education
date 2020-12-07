@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Brando Responsive & Multipurpose OnePage WordPress Theme</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=Emulate10"> -->
+    <meta name="Viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0. maximum-scale=1.6, user-scalable=no"> <!-- input창 입력 시 확대되는거 막아줌 -->
+    <!-- initial-scale=1.0 :초기값 minimum-scale=1.0:본래 사이즈보다 줄이지 못하게, maximum-scale=1.6: 본래크기보다 1.6배만 크게, user-scalable=no:폼 요소 선택(포커스) 시 확대 현상을 제거 (사용자가 손가락으로 확대못하게함) -->
+    <meta name="Title" content="Brando Restaurant">
+    <meta name="Publisher" content="프론트엔드 박소혜">
+    <meta name="Author-date" content="2020-12-03"> 
+    <meta name="Author" content="Brando">
+    <meta name="Copyright" content="Brando">
+    <meta name="Keywords" content="Brando, 웹표준,웹접근성,Bransdo Restaurant, Brando 반응형 웹사이트">
+    <meta name="description" content="브란도는 웹 제작 전문 메이커 미국 브랜드입니다."> 
+    <meta name="Robots" content="index, follow">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./img/brando-32x32-1.png">
+    <link rel="apple-touch-icon" href=".img/brando-32x32-1.png">
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/response.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+
+    <!-- 오픈 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- font-awesome 4.0 -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script> <!-- font-awesome 5.0 -->
+
+    <!-- 오픈소스 -->
+    <script src="./js/lib/jquery-1.12.4.min.js"></script>
+    <script src="./js/lib/prefixfree.min.js"></script>
+    <script src="./js/lib/jquery.touchSwipe.js"></script>
+    <script src="./js/lib/jquery.easing.1.3.js"></script>
+
+    <!-- 조건 주석문 익스프롤러 하위 IE9 IE8 IE7 폴리필 -->
+    <!-- 스크립트 스타일 -->
+
+    <!--[if lte IE 9]>
+        <script src="./js/lib/IE9.js"></script>
+    <![endif]-->
+
+    <!--[if lte IE 8]>
+        <script src="./js/lib/html5shiv.min.js"></script>
+        <script src="./js/lib/jqPIE.js"></script>
+        <script src="./js/lib/PIE.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/ie8.css">
+    <![endif]-->
+
+    <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" href="./css/ie7.css">
+    <![endif]-->
+ 
+</head>
+<body id="intro">
+<ul id="skip">
+    <li><a href="#header" title="메뉴바로가기">메뉴바로가기</a></li>
+    <li><a href="#main" title="메인바로가기">메인바로가기</a></li>
+    <li><a href="#footer" title="하단바로가기">하단바로가기</a></li>
+</ul>
+<div id="wrap">
+    <header id="header">
+        <div class="wrap"> <!-- 넓이 1170 -->
+            <div class="gap fixedclear"> <!-- 양쪽패딩15px씩 전체넓이1140 -->
+                <div class="left">
+                    <h1 class="logo">
+                        <a href="#intro" class="logo-btn smooth-btn" title="브란드 로고">
+                            <img src="./img/logo-restaurant.png" alt="브란도(Brando)">
+                        </a><i></i>
+                    </h1>
+                    <nav id="nav">
+                        <ul class="fixedclear">
+                                        <!-- 👇여기 id 아니면 안됨 -->
+                            <li><a href="#section05" class="main-btn smooth-btn" title="메인메뉴">ABOUT</a></li>
+                            <li><a href="#section06" class="main-btn smooth-btn" title="메인메뉴">MENU</a></li>
+                            <li><a href="#section07" class="main-btn smooth-btn" title="메인메뉴">CHEF</a></li>
+                            <li><a href="#section09" class="main-btn smooth-btn" title="메인메뉴">GALLERY</a></li>
+                            <li><a href="#section11" class="main-btn smooth-btn" title="메인메뉴">BLOG</a></li>
+                            <li><a href="#section13" class="main-btn smooth-btn" title="메인메뉴">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="right">
+                    <aside id="aside">
+                        <div>
+                            <span>BOOK YOUR TABLES?</span>
+                            <span><a href="#section13" class="smooth-btn" title="예약하기 버튼">BOOK NOW</a></span>
+                        </div>
+                    </aside>
+                    <div class="mobile">
+                        <a href="#" class="mobile-btn" title="모바일 전용 메뉴바">
+                            <i class="mline mline1"></i>
+                            <i class="mline mline2"></i>
+                            <i class="mline mline3"></i>
+                        </a>
+                    </div>
+                    <div class="mobile-menu">
+                        <ul>
+                            <li><a href="#section05" class="mobile-main-btn smooth-btn" title="모바일 메뉴 버튼">ABOUT</a></li>
+                            <li><a href="#section06" class="mobile-main-btn smooth-btn" title="모바일 메뉴 버튼">MENU</a></li>
+                            <li><a href="#section07" class="mobile-main-btn smooth-btn" title="모바일 메뉴 버튼">CHEF</a></li>
+                            <li><a href="#section09" class="mobile-main-btn smooth-btn" title="모바일 메뉴 버튼">GALLERY</a></li>
+                            <li><a href="#section11" class="mobile-main-btn smooth-btn" title="모바일 메뉴 버튼">BLOG</a></li>
+                            <li><a href="#section14" class="mobile-main-btn smooth-btn" title="모바일 메뉴 버튼">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header> <!-- 태그 안에 id는 바로가기 메뉴 -->
+    <main id="main">
+        <section id="section01" class="wheel-event"> <!-- 작업순서 1번(왜냐면 얘가 있어야 header가 보임) -->
+            <!-- fadeIn/Out 되는 슬라이드 만들기 -->
+            <h2 class="hide">섹션1</h2>
+            <div class="slide-container">
+                <div class="slide-view">
+                    <ul class="slide-wrap">
+                        <li class="slide slide0"><div></div></li>
+                        <li class="slide slide1"><div></div></li>
+                        <li class="slide slide2"><div></div></li>
+                        <li class="slide slide3"><div></div></li>
+                        <!-- li 뒷배경으로 이미지를 넣어서 li 자체로 슬라이드 하는 방법도 있음 -->
+                    </ul>
+                </div>
+            </div>
+            <span class="hungry"><img src="./img/hungry.png" alt="메인 타이틀"></span>
+            <span class="arrow-down"><a href="#section02" class="arrow-down-btn smooth-btn" title="아래 버튼"><img src="./img/arrow-down.png" alt="밑으로 이동하기"></a></span>
+        </section>
+        <!-- 섹션 2 3 4가 똑같아서 2만 잘 만들어서 3 4에 붙여넣기 하면 됨 -->
+        <section id="section02" class="section234 wheel-event"> <!-- 줄구분 -->
+            <h2 class="hide">섹션2</h2>
+            <div class="wrap"> <!-- 전체 넓이 1170px로 써줌  -->
+                <div class="gap"> <!-- 실제 넓이는 1140px이라 양쪽 15px씩 여백용 요소 넣어줌 -->
+                    <div class="container"> <!-- 문서 실제 작업 공간 여기서부터 넓이 써줌 -->
+                        <div class="content-wrap"> <!-- 식사 시간, 메뉴 등에 대한 설명 -->
+                            <!-- 지금부터 고정값으로 높이 먼저 잡아주고 나중에 제이쿼리로 비율해주면 됨  -->
+                            <div class="text-gap"><!-- 공백도 박스처리 -->
+                                <div class="text-wrap">
+                                    <h2><img src="./img/icon-breakfast.png" alt="breakfast 아이콘"></h2>
+                                    <h3>BREAKFAST</h3>
+                                    <h4>EVERY DAY 08:00 - 10:00</h4>
+                                    <h5><img src="./img/separator.png" alt="seperator 아이콘"></h5>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                        Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>
+                                    <span><a href="#section03" class="smooth-btn" title="섹션3 이동"><img src="./img/arrow-down.png" alt="아래로 이동"></a></span>
+                                </div> <!-- 아무런 여백없이 글자(내용)만 랩핑 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section03" class="section234 wheel-event">
+            <h2 class="hide">섹션3</h2>
+            <div class="wrap"> <!-- 1170 -->
+                <div class="gap"> <!-- margin :0 15px -->
+                    <div class="container"> <!-- 1140 -->
+                        <div class="content-wrap"> <!-- 450*550 -->
+                            <div class="text-gap"> <!-- 여백 80 -->
+                                <div class="text-wrap"> <!-- 텍스트박스 290 -->
+                                    <h2><img src="./img/icon-lunch.png" alt="breakfast 아이콘"></h2>
+                                    <h3>LUNCH</h3>
+                                    <h4>EVERY DAY 13:00 - 15:00</h4>
+                                    <h5><img src="./img/separator.png" alt="seperator 아이콘"></h5>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                        Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>
+                                    <span><a href="#section04" class="smooth-btn" title="섹션3 이동"><img src="./img/arrow-down.png" alt="아래로 이동"></a></span>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section04" class="section234 wheel-event">
+            <h2 class="hide">섹션4</h2>
+            <div class="wrap"> 
+                <div class="gap"> 
+                    <div class="container"> 
+                        <div class="content-wrap"> 
+                            <div class="text-gap"> 
+                                <div class="text-wrap"> 
+                                    <h2><img src="./img/icon-breakfast.png" alt="breakfast 아이콘"></h2>
+                                    <h3>DINNER</h3>
+                                    <h4>EVERY DAY 19:00 - 22:00</h4>
+                                    <h5><img src="./img/separator.png" alt="seperator 아이콘"></h5>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                        Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>
+                                    <span><a href="#section05" class="smooth-btn" title="섹션3 이동"><img src="./img/arrow-down.png" alt="아래로 이동"></a></span>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section05" class="wheel-event">
+            <h2 class="hide">섹션5</h2>
+            <div class="wrap fixedclear"><!-- 좌 , 우측이 여백이 있다면 양쪽에서 띄어주기 -->
+                <div class="title-wrap">
+                    <h2>DISCOVER STORY</h2>
+                    <h3><img src="./img/separator.png" alt="separator"></h3>
+                </div>
+                <div class="left-wrap">
+                    <div class="gap"><!-- 양쪽 마진 15 -->
+                        <div class="content"><!-- 넓이 100 -->
+                            <img src="./img/restaurant-img4.jpg" alt="restaurant-img">
+                        </div>
+                    </div>
+                </div><!-- 사진 -->
+                <div class="right-wrap">
+                    <div class="gap">
+                        <div class="content">
+                            <h3>SPECIALITY OF THE HOUSE</h3>
+                            <h2>DISCOVER OUR<br> TASTY MEALS</h2>
+                            <h4><i class="blind">아이콘</i></h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s. 
+                                Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>
+                            <span> 
+                                <a href="#section06" class="smooth-btn" title="Discover Menu">Discover Menu</a>
+                            </span>
+                        </div>
+                    </div>
+                </div><!-- 글씨 -->
+
+            </div>
+        </section>
+        <section id="section06" class="wheel-event">
+            <h2 class="hide">섹션6</h2>
+            <div class="wrap">
+                <ul class="container fixedclear">
+                    <li>
+                        <div class="gap"><!-- 백그라운드가 여백이 잇으니까 여기다가 배경이미지 -->
+                            <div class="content" tabindex="0">
+                                <div class="small-box">
+                                    <div class="small-box-gap">
+                                        <div class="small-text-wrap">
+                                            <h2><img src="./img/restaurant-img14.jpg" alt="타이틀이미지"></h2>
+                                            <h3>BREAKFAST</h3>
+                                            <h4>EVERY DAY 08:00 - 10:00</h4>
+                                            <h5><img src="./img/separator2.png" alt="separator2"></h5>
+                                        </div>
+                                    </div>
+                                </div><!-- 아침,점심,저녁 박스 -->
+                                <div class="large-box">
+                                    <div class="large-box-gap"><!-- 전체박스 여백 -->
+                                        <ul> <!-- 목록 총 5개 묶음 -->
+                                            <li> <!-- 목록 총 5개, 1행 / 5행 -->
+                                                <ul class="fixedclear">
+                                                    <li> <!-- 좌측 이미지 -->
+                                                        <div> <!-- 메뉴사진 -->
+                                                            <img src="./img/restaurant-img8.jpg" alt="restaurant-img8">
+                                                        </div>
+                                                    </li>
+                                                    <li> <!-- 우측 타이틀 텍스트 내용 -->
+                                                        <div>
+                                                            <h3>SOFT-BOILED EGG - $12.00</h3><!-- 타이틀 -->
+                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p><!-- 목록 -->
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul> <!-- 목록 총 5개 묶음 -->
+                                            <li> <!-- 목록 총 5개, 2행 / 5행 -->
+                                                <ul class="fixedclear">
+                                                    <li> <!-- 좌측 이미지 -->
+                                                        <div> <!-- 메뉴사진 -->
+                                                            <img src="./img/restaurant-img9.jpg" alt="restaurant-img9">
+                                                        </div>
+                                                    </li>
+                                                    <li> <!-- 우측 타이틀 텍스트 내용 -->
+                                                        <div>
+                                                            <h3>CREPES OF WRATH - $06.00</h3><!-- 타이틀 -->
+                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><!-- 목록 -->
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul> <!-- 목록 총 5개 묶음 -->
+                                            <li> <!-- 목록 총 5개, 3행 / 5행 -->
+                                                <ul class="fixedclear">
+                                                    <li> <!-- 좌측 이미지 -->
+                                                        <div> <!-- 메뉴사진 -->
+                                                            <img src="./img/restaurant-img10.jpg" alt="restaurant-img10">
+                                                        </div>
+                                                    </li>
+                                                    <li> <!-- 우측 타이틀 텍스트 내용 -->
+                                                        <div>
+                                                            <h3>CREAMSICLE SHAKE - $10.60</h3><!-- 타이틀 -->
+                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p><!-- 목록 -->
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul> <!-- 목록 총 5개 묶음 -->
+                                            <li> <!-- 목록 총 5개, 4행 / 5행 -->
+                                                <ul class="fixedclear">
+                                                    <li> <!-- 좌측 이미지 -->
+                                                        <div> <!-- 메뉴사진 -->
+                                                            <img src="./img/restaurant-img11.jpg" alt="restaurant-img10">
+                                                        </div>
+                                                    </li>
+                                                    <li> <!-- 우측 타이틀 텍스트 내용 -->
+                                                        <div>
+                                                            <h3>PERFECT KENTUCKY - $09.50</h3><!-- 타이틀 -->
+                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p><!-- 목록 -->
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul> <!-- 목록 총 5개 묶음 -->
+                                            <li> <!-- 목록 총 5개, 5행 / 5행 -->
+                                                <ul class="fixedclear">
+                                                    <li> <!-- 좌측 이미지 -->
+                                                        <div> <!-- 메뉴사진 -->
+                                                            <img src="./img/restaurant-img12.jpg" alt="restaurant-img10">
+                                                        </div>
+                                                    </li>
+                                                    <li> <!-- 우측 타이틀 텍스트 내용 -->
+                                                        <div>
+                                                            <h3>SMOKED SANDWICH - $08.00</h3><!-- 타이틀 -->
+                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p><!-- 목록 -->
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </li>
+                    <li>
+                        <div class="gap">
+                            <div class="content" tabindex="0">
+                                <div class="small-box">
+                                    <div class="small-box-gap">
+                                        <div class="small-text-wrap">
+                                            <h2><img src="./img/restaurant-img15.jpg" alt="타이틀이미지"></h2>
+                                            <h3>LUNCH</h3>
+                                            <h4>EVERY DAY 13:00 - 15:00</h4>
+                                            <h5><img src="./img/separator2.png" alt="separator2"></h5>
+                                        </div>                                    
+                                    </div>
+                                </div>
+                                <div class="large-box">
+                                    <div class="large-box-gap"><!-- 전체박스 여백 -->
+                                        <ul> <!-- 목록 총 5개 묶음 -->
+                                            <li> <!-- 목록 총 5개, 1행 / 5행 -->
+                                                <ul class="fixedclear">
+                                                    <li> <!-- 좌측 이미지 -->
+                                                        <div> <!-- 메뉴사진 -->
+                                                            <img src="./img/restaurant-img8.jpg" alt="restaurant-img8">
+                                                        </div>
+                                                    </li>
+                                                    <li> <!-- 우측 타이틀 텍스트 내용 -->
+                                                        <div>
+                                                            <h3>SOFT-BOILED EGG - $12.00</h3><!-- 타이틀 -->
+                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p><!-- 목록 -->
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul> <!-- 목록 총 5개 묶음 -->
+                                            <li> <!-- 목록 총 5개, 2행 / 5행 -->
+                                                <ul class="fixedclear">
+                                                    <li> <!-- 좌측 이미지 -->
+                                                        <div> <!-- 메뉴사진 -->
+                                                            <img src="./img/restaurant-img9.jpg" alt="restaurant-img9">
+                                                        </div>
+                                                    </li>
+                                                    <li> <!-- 우측 타이틀 텍스트 내용 -->
+                                                        <div>
+                                                            <h3>CREPES OF WRATH - $06.00</h3><!-- 타이틀 -->
+                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p><!-- 목록 -->
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul> <!-- 목록 총 5개 묶음 -->
+                                            <li> <!-- 목록 총 5개, 3행 / 5행 -->
+                                                <ul class="fixedclear">
+                                                    <li> <!-- 좌측 이미지 -->
+                                                        <div> <!-- 메뉴사진 -->
+                                                            <img src="./img/restaurant-img10.jpg" alt="restaurant-img10">
+                                                        </div>
+                                                    </li>
+                                                    <li> <!-- 우측 타이틀 텍스트 내용 -->
+                                                        <div>
+                                                            <h3>CREAMSICLE SHAKE - $10.60</h3><!-- 타이틀 -->
+                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p><!-- 목록 -->
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul> <!-- 목록 총 5개 묶음 -->
+                                            <li> <!-- 목록 총 5개, 4행 / 5행 -->
+                                                <ul class="fixedclear">
+                                                    <li> <!-- 좌측 이미지 -->
+                                                        <div> <!-- 메뉴사진 -->
+                                                            <img src="./img/restaurant-img11.jpg" alt="restaurant-img10">
+                                                        </div>
+                                                    </li>
+                                                    <li> <!-- 우측 타이틀 텍스트 내용 -->
+                                                        <div>
+                                                            <h3>PERFECT KENTUCKY - $09.50</h3><!-- 타이틀 -->
+                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p><!-- 목록 -->
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul> <!-- 목록 총 5개 묶음 -->
+                                            <li> <!-- 목록 총 5개, 5행 / 5행 -->
+                                                <ul class="fixedclear">
+                                                    <li> <!-- 좌측 이미지 -->
+                                                        <div> <!-- 메뉴사진 -->
+                                                            <img src="./img/restaurant-img12.jpg" alt="restaurant-img10">
+                                                        </div>
+                                                    </li>
+                                                    <li> <!-- 우측 타이틀 텍스트 내용 -->
+                                                        <div>
+                                                            <h3>SMOKED SANDWICH - $08.00</h3><!-- 타이틀 -->
+                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p><!-- 목록 -->
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gap">
+                            <div class="content" tabindex="0">
+                                <div class="small-box">
+                                    <div class="small-box-gap">
+                                        <div class="small-text-wrap">
+                                            <h2><img src="./img/restaurant-img16.jpg" alt="타이틀이미지"></h2>
+                                            <h3>DINNER</h3>
+                                            <h4>EVERY DAY 19:00 - 22:00</h4>
+                                            <h5><img src="./img/separator2.png" alt="separator2"></h5>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <div class="large-box">
+                                    <div class="large-box-gap"><!-- 전체박스 여백 -->
+                                        <ul> <!-- 목록 총 5개 묶음 -->
+                                            <li> <!-- 목록 총 5개, 1행 / 5행 -->
+                                                <ul class="fixedclear">
+                                                    <li> <!-- 좌측 이미지 -->
+                                                        <div> <!-- 메뉴사진 -->
+                                                            <img src="./img/restaurant-img8.jpg" alt="restaurant-img8">
+                                                        </div>
+                                                    </li>
+                                                    <li> <!-- 우측 타이틀 텍스트 내용 -->
+                                                        <div>
+                                                            <h3>SOFT-BOILED EGG - $12.00</h3><!-- 타이틀 -->
+                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p><!-- 목록 -->
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul> <!-- 목록 총 5개 묶음 -->
+                                            <li> <!-- 목록 총 5개, 2행 / 5행 -->
+                                                <ul class="fixedclear">
+                                                    <li> <!-- 좌측 이미지 -->
+                                                        <div> <!-- 메뉴사진 -->
+                                                            <img src="./img/restaurant-img9.jpg" alt="restaurant-img9">
+                                                        </div>
+                                                    </li>
+                                                    <li> <!-- 우측 타이틀 텍스트 내용 -->
+                                                        <div>
+                                                            <h3>CREPES OF WRATH - $06.00</h3><!-- 타이틀 -->
+                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p><!-- 목록 -->
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul> <!-- 목록 총 5개 묶음 -->
+                                            <li> <!-- 목록 총 5개, 3행 / 5행 -->
+                                                <ul class="fixedclear">
+                                                    <li> <!-- 좌측 이미지 -->
+                                                        <div> <!-- 메뉴사진 -->
+                                                            <img src="./img/restaurant-img10.jpg" alt="restaurant-img10">
+                                                        </div>
+                                                    </li>
+                                                    <li> <!-- 우측 타이틀 텍스트 내용 -->
+                                                        <div>
+                                                            <h3>CREAMSICLE SHAKE - $10.60</h3><!-- 타이틀 -->
+                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p><!-- 목록 -->
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul> <!-- 목록 총 5개 묶음 -->
+                                            <li> <!-- 목록 총 5개, 3행 / 5행 -->
+                                                <ul class="fixedclear">
+                                                    <li> <!-- 좌측 이미지 -->
+                                                        <div> <!-- 메뉴사진 -->
+                                                            <img src="./img/restaurant-img11.jpg" alt="restaurant-img10">
+                                                        </div>
+                                                    </li>
+                                                    <li> <!-- 우측 타이틀 텍스트 내용 -->
+                                                        <div>
+                                                            <h3>SPERFECT KENTUCKY - $09.50</h3><!-- 타이틀 -->
+                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p><!-- 목록 -->
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul> <!-- 목록 총 5개 묶음 -->
+                                            <li> <!-- 목록 총 5개, 3행 / 5행 -->
+                                                <ul class="fixedclear">
+                                                    <li> <!-- 좌측 이미지 -->
+                                                        <div> <!-- 메뉴사진 -->
+                                                            <img src="./img/restaurant-img12.jpg" alt="restaurant-img10">
+                                                        </div>
+                                                    </li>
+                                                    <li> <!-- 우측 타이틀 텍스트 내용 -->
+                                                        <div>
+                                                            <h3>SMOKED SANDWICH - $08.00</h3><!-- 타이틀 -->
+                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p><!-- 목록 -->
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="section07" class="wheel-event">
+            <h2 class="hide">섹션7</h2>
+            <div class="wrap">
+                <div class="title-wrap">
+                    <h2>OUR CHEF</h2>
+                    <h3><img src="./img/separator.png" alt="separator"></h3>
+                </div>
+            <div class="container">
+                <ul class="fixedclear">
+                    <li tabindex="0">
+                        <div>
+                            <img src="./img/restaurant-img21.jpg" alt="restaurant-img21">
+                            <div>
+                                <h6><i class="blind">아이콘</i></h6>
+                                <h2>SANCHO PANSA</h2>
+                                <h3>CHEF, CO-FOUNDER</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis blanditiis excepturi itaque ea a aut soluta</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li tabindex="0">
+                        <div>
+                            <img src="./img/restaurant-img20.jpg" alt="restaurant-img20">
+                            <div>
+                                <h6><i class="blind">아이콘</i></h6>
+                                <h2>PATRICK SMITH</h2>
+                                <h3>CHEF, CO-FOUNDER</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis blanditiis excepturi itaque ea a aut soluta</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li tabindex="0">
+                        <div>
+                            <img src="./img/restaurant-img22.jpg" alt="restaurant-img22">
+                            <div>
+                                <h6><i class="blind">아이콘</i></h6>
+                                <h2>JANE LUPKIN</h2>
+                                <h3>CHEF, CO-FOUNDER</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis blanditiis excepturi itaque ea a aut soluta</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li tabindex="0">
+                        <div>
+                            <img src="./img/restaurant-img23.jpg" alt="restaurant-img23">
+                            <div>
+                                <h6><i class="blind">아이콘</i></h6>
+                                <h2>SOMMER CHRIS</h2>
+                                <h3>CHEF, CO-FOUNDER</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis blanditiis excepturi itaque ea a aut soluta</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>    
+            </div>
+        </section>
+        <section id="section08" class="wheel-event">
+            <h2 class="hide">섹션8</h2>
+            <div class="wrap">
+                <div class="gap">
+
+                    <div class="title-wrap">
+                        <h2><img src="./img/restaurant-img36.png" alt="Special Dishes"></h2>
+                    </div>
+                    <div class="container">
+                        <ul class="fixedclear">
+                            <li>
+                                <div tabindex="0">
+                                    <img src="./img/restaurant-img33.png" alt="restaurant-img33">
+                                    <h3>PERFECT KENTUCKY</h3>
+                                    <h4>TOMATOES / PARMESAN / BASIL</h4>
+                                    <div class="only"><span>
+                                        <em>ONLY</em>
+                                        <strong>$15.00</strong>
+                                    </span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div tabindex="0">
+                                    <img src="./img/restaurant-img34.png" alt="restaurant-img34">
+                                    <h3>HOT CHICKEN BREAST</h3>
+                                    <h4>OLIVES / PARMESAN / BASIL</h4>
+                                    <div class="only"><span>
+                                        <em>ONLY</em>
+                                        <strong>$15.00</strong>
+                                    </span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div tabindex="0">
+                                    <img src="./img/restaurant-img35.png" alt="restaurant-img35">
+                                    <h3>CHILLY CHEESE STEAK</h3>
+                                    <h4>CHILLI / PARMESAN / BASIL</h4>
+                                    <div class="only"><span>
+                                        <em>ONLY</em>
+                                        <strong>$15.00</strong>
+                                    </span></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section09" class="wheel-event">
+            <h2 class="hide">섹션9</h2>
+            <div class="wrap">
+                <div class="gap">
+                    <div class="container">
+                        <div class="title section-title">
+                            <h2>FOOD GALLERY</h2>
+                            <h3><img src="./img/separator.png" alt="separator"></h3>
+                        </div>
+
+                        <div class="content">                        
+                            <nav class="gallery-nav">
+                                <ul>
+                                    <li><a href="#" class="gallery-btn addNav" title="갤러리버튼">ALL</a></li>
+                                    <li><a href="#" class="gallery-btn" title="갤러리버튼-아침">BREAKFAST</a></li>
+                                    <li><a href="#" class="gallery-btn" title="갤러리버튼-저녁">DINNER</a></li>
+                                    <li><a href="#" class="gallery-btn" title="갤러리버튼-음료">DRINKS</a></li>
+                                    <li><a href="#" class="gallery-btn" title="갤러리버튼-점심">LUNCH</a></li>
+                                </ul>
+                            </nav>
+                            <ul class="gallery fixedclear addZoom">
+                                <li>
+                                    <div>
+                                        <a href="#" class="gallery-img-btn" title="gallery-img-btn">
+                                            <img src="./img/restaurant-img25.jpg" alt="Soft-Boiled Organic">
+                                        <!-- Tag value = "property" -->
+                                        </a>
+                                        <a href="javascript:" class="gallery-img-caption" title="gallery-img-caption">
+                                            <strong>Soft-Boiled Organic</strong>
+                                            <em>One Dish - $25.55</em>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#" class="gallery-img-btn" title="gallery-img-btn">
+                                            <img src="./img/restaurant-img26.jpg" alt="Soft-Boiled Organic">
+                                        </a>
+                                        <a href="javascript:" class="gallery-img-caption" title="gallery-img-caption">
+                                            <strong>Beyond Blueberries</strong>
+                                            <em>One Dish - $13.00</em>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#" class="gallery-img-btn" title="gallery-img-btn">
+                                            <img src="./img/restaurant-img27.jpg" alt="Soft-Boiled Organic">
+                                        </a>
+                                        <a href="javascript:" class="gallery-img-caption" title="gallery-img-caption">
+                                            <strong>Curry Salad Soup</strong>
+                                            <em>One Dish - $10.55</em>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#" class="gallery-img-btn" title="gallery-img-btn">
+                                            <img src="./img/restaurant-img28.jpg" alt="Soft-Boiled Organic">
+                                        </a>
+                                        <a href="javascript:" class="gallery-img-caption" title="gallery-img-caption">
+                                            <strong>The Crepes of Wrath</strong>
+                                            <em>One Dish - $09.25</em>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#" class="gallery-img-btn" title="gallery-img-btn">
+                                            <img src="./img/restaurant-img29.jpg" alt="Soft-Boiled Organic">
+                                        </a>
+                                        <a href="javascript:" class="gallery-img-caption" title="gallery-img-caption">
+                                            <strong>Tang Creamsicle Shake</strong>
+                                            <em>One Dish - $12.55</em>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#" class="gallery-img-btn" title="gallery-img-btn">
+                                            <img src="./img/restaurant-img30.jpg" alt="Soft-Boiled Organic">
+                                        </a>
+                                        <a href="javascript:" class="gallery-img-caption" title="gallery-img-caption">
+                                            <strong>The Crepes of Wrath</strong>
+                                            <em>One Dish - $15.70</em>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#" class="gallery-img-btn" title="gallery-img-btn">
+                                            <img src="./img/restaurant-img31.jpg" alt="Soft-Boiled Organic">
+                                        </a>
+                                        <a href="javascript:" class="gallery-img-caption" title="gallery-img-caption">
+                                            <strong>Arugula Flatbread</strong>
+                                            <em>One Dish - $12.50</em>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#" class="gallery-img-btn" title="gallery-img-btn">
+                                            <img src="./img/restaurant-img32.jpg" alt="Soft-Boiled Organic">
+                                        </a>
+                                        <a href="javascript:" class="gallery-img-caption" title="gallery-img-caption">
+                                            <strong>Greek Yogurt Sorbet</strong>
+                                            <em>One Dish - $13.55</em>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section10" class="wheel-event">
+            <h2 class="hide">섹션10</h2>
+            <div class="wrap">
+                <div class="gap">
+                    <div class="container">
+                        <div class="slide-container">
+                            <div class="slide-view">
+
+                                <ul class="slide-wrap fixedclear">
+                                    <li class="slide slide1">
+                                        <div>
+                                            <div class="box fixedclear">
+                                                <div class="left">
+                                                    <div class="img-wrap"><img src="./img/restaurant-img37.jpg" alt="restaurant-img37"></div>
+                                                    <span><i class="fas fa-quote-left"></i></span>
+                                                </div>
+                                                <div class="right">
+                                                    <div class="txt-wrap">
+                                                        <h3>
+                                                            <span class="blind">5stars</span>
+                                                            <span><i class="fas fa-star"></i></span>
+                                                            <span><i class="fas fa-star"></i></span>
+                                                            <span><i class="fas fa-star"></i></span>
+                                                            <span><i class="fas fa-star"></i></span>
+                                                            <span><i class="fas fa-star"></i></span>
+                                                        </h3>
+                                                        <h2>Alexander Harvard</h2>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, saepe molestias nulla nobis omnis id natus et nihil quisquam, accusamus voluptatem ex a in laboriosam est dignissimos excepturi sequi amet?</p>
+                                                        <h6><i class="blind">아이콘</i></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="slide slide2">
+                                        <div>
+                                            <div class="box fixedclear">
+                                                <div class="left">
+                                                    <div class="img-wrap"><img src="./img/restaurant-img38.jpg" alt="restaurant-img38"></div>
+                                                    <span><i class="fas fa-quote-left"></i></span>
+                                                </div>
+                                                <div class="right">
+                                                    <div class="txt-wrap">
+                                                        <h3>
+                                                            <span class="blind">5stars</span>
+                                                            <span><i class="fas fa-star"></i></span>
+                                                            <span><i class="fas fa-star"></i></span>
+                                                            <span><i class="fas fa-star"></i></span>
+                                                            <span><i class="fas fa-star"></i></span>
+                                                            <span><i class="fas fa-star"></i></span>
+                                                        </h3>
+                                                        <h2>Alexander Harvard</h2>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, saepe molestias nulla nobis omnis id natus et nihil quisquam, accusamus voluptatem ex a in laboriosam est dignissimos excepturi sequi amet?</p>
+                                                        <h6><i class="blind">아이콘</i></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="slide slide3">
+                                        <div>
+                                            <div class="box fixedclear">
+                                                <div class="left">
+                                                    <div class="img-wrap"><img src="./img/restaurant-img39.jpg" alt="restaurant-img39"></div>
+                                                    <span><i class="fas fa-quote-left"></i></span>
+                                                </div>
+                                                <div class="right">
+                                                    <div class="txt-wrap">
+                                                        <h3>
+                                                            <span class="blind">5stars</span>
+                                                            <span><i class="fas fa-star"></i></span>
+                                                            <span><i class="fas fa-star"></i></span>
+                                                            <span><i class="fas fa-star"></i></span>
+                                                            <span><i class="fas fa-star"></i></span>
+                                                            <span><i class="fas fa-star"></i></span>
+                                                        </h3>
+                                                        <h2>Alexander Harvard</h2>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, saepe molestias nulla nobis omnis id natus et nihil quisquam, accusamus voluptatem ex a in laboriosam est dignissimos excepturi sequi amet?</p>
+                                                        <h6><i class="blind">아이콘</i></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <span class="arrow-next"><a href="javascript:void(0)" class="next-btn" title="next-btn"><i class="fas fa-angle-right"></i></a></span>
+                                <span class="arrow-prev"><a href="javascript:void(0)" class="prev-btn" title="prev-btn"><i class="fas fa-angle-left"></i></a></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section11" class="wheel-event">
+            <h2 class="hide">섹션11</h2>
+        <div class="wrap">
+            <div class="gap">
+                <div class="title-wrap">
+                    <h2>LATEST BLOG</h2>
+                    <h3><img src="./img/separator3.png" alt="separator3"></h3>
+                </div>
+                <div class="container">
+                    <ul class="fixedclear">
+                        <li> <!-- 블로그 1번/4번 -->
+                            <div> <!-- list gap (각 블로그 사이) -->
+                                <ul class="blog fixedclear"> <!-- 왼;이미지;오;텍스트 -->
+                                    <li>
+                                        <div><!-- 이미지로 꽉 차서 공백X,overflow:hidden -->
+                                            <img src="./img/blog-post-img4.jpg" alt="blog-post-img4">
+                                        </div>
+                                    </li>
+                                    <li> <!--◀:before(왼쪽,위쪽은 before, 오른쪽,아래쪽은 after)-->
+                                        <div ><!-- txt table, overflow:hidden -->
+                                            <div><!-- txt table-cell,vertical-align:middle;horizontal-align:middle; -->
+                                                <h3>18 MARCH 2016</h3>
+                                                <p><a href="#" title="HOW TO MAKE: BUTTERMILK FRIED CHICKEN WINGS">HOW TO MAKE: BUTTERMILK FRIED CHICKEN WINGS</a></p>
+                                                <h6><i class="blind">아이콘</i></h6> <!--width:30px;height:2px;color:star색깔이랑 같음-->
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li> <!-- 블로그 2번/4번 -->
+                            <div> <!-- list gap (각 블로그 사이) -->
+                                <ul class="blog fixedclear"> <!-- 왼;이미지;오;텍스트 -->
+                                    <li>
+                                        <div><!-- 이미지로 꽉 차서 공백X,overflow:hidden -->
+                                            <img src="./img/blog-post-img5.jpg" alt="blog-post-img5">
+                                        </div>
+                                    </li>
+                                    <li> <!--◀:before(왼쪽,위쪽은 before, 오른쪽,아래쪽은 after)-->
+                                        <div ><!-- txt table, overflow:hidden -->
+                                            <div><!-- txt table-cell,vertical-align:middle;horizontal-align:middle; -->
+                                                <h3>18 MARCH 2016</h3>
+                                                <p><a href="#" title="SLOW-COOKED BABY BACK RIBS DINNER PARTY!">SLOW-COOKED BABY BACK RIBS DINNER PARTY!</a></p>
+                                                <h6><i class="blind">아이콘</i></h6> <!--width:30px;height:2px;color:star색깔이랑 같음-->
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li> <!-- 블로그 3번/4번 -->
+                            <div> <!-- list gap (각 블로그 사이) -->
+                                <ul class="blog fixedclear"> <!-- 왼;이미지;오;텍스트 -->
+                                    <li>
+                                        <div><!-- 이미지로 꽉 차서 공백X,overflow:hidden -->
+                                            <img src="./img/blog-post-img6.jpg" alt="blog-post-img6">
+                                        </div>
+                                    </li>
+                                    <li> <!--◀:before(왼쪽,위쪽은 before, 오른쪽,아래쪽은 after)-->
+                                        <div ><!-- txt table, overflow:hidden -->
+                                            <div><!-- txt table-cell,vertical-align:middle;horizontal-align:middle; -->
+                                                <h3>18 MARCH 2016</h3>
+                                                <p><a href="#" title="TOMATO AND EGGLESS PIZZA BREAKFAST FOOD">TOMATO AND EGGLESS PIZZA BREAKFAST FOOD</a></p>
+                                                <h6><i class="blind">아이콘</i></h6> <!--width:30px;height:2px;color:star색깔이랑 같음-->
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li> <!-- 블로그 4번/4번 -->
+                            <div> <!-- list gap (각 블로그 사이) -->
+                                <ul class="blog fixedclear"> <!-- 왼;이미지;오;텍스트 -->
+                                    <li>
+                                        <div><!-- 이미지로 꽉 차서 공백X,overflow:hidden -->
+                                            <img src="./img/blog-post-img7.jpg" alt="blog-post-img7">
+                                        </div>
+                                    </li>
+                                    <li> <!--◀:before(왼쪽,위쪽은 before, 오른쪽,아래쪽은 after)-->
+                                        <div ><!-- txt table, overflow:hidden -->
+                                            <div><!-- txt table-cell,vertical-align:middle;horizontal-align:middle; -->
+                                                <h3>18 MARCH 2016</h3>
+                                                <p><a href="#" title="HOW TO MAKE BASIC, GREAT CHOCOLATE CHIP">HOW TO MAKE BASIC, GREAT CHOCOLATE CHIP</a></p>
+                                                <h6><i class="blind">아이콘</i></h6> <!--width:30px;height:2px;color:star색깔이랑 같음-->
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </section>
+        <section id="section12" class="wheel-event">
+            <h2 class="hide">섹션12</h2>
+            <div class="wrap">
+                <div class="gap">
+                    <div>
+                        <div class="title-wrap">
+                            <h3>EASY SEAT RESERVATIONS</h3>
+                            <h2>BOOK YOUR TABLES NOW!</h2>
+                            <div><a href="#" title="RESERVE NOW Btn">RESERVE NOW</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section13" class="wheel-event">
+            <h6 class="hide">섹션13</h6>
+            <div class="wrap">
+                <div class="gap">
+                    <div class="container">
+                        <ul class="fixedclear">
+                            <li>
+                                <div>
+                                    <h2>0</h2> 
+                                    <h3>CLIENTS SERVED</h3>
+                                    <h4><i class="icon-heart"></i><span class="blind">icon</span></h4><!--브란도 폰트 자체에 들어있는 아이콘-->        
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <h2>0</h2> 
+                                    <h3>HOURS COOKING</h3>
+                                    <h4><i class="icon-clock"></i><span class="blind">icon</span></h4><!--브란도 폰트 자체에 들어있는 아이콘-->        
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <h2>0</h2> 
+                                    <h3>TABLE BOOKING</h3>
+                                    <h4><i class="icon-wine"></i><span class="blind">icon</span></h4><!--브란도 폰트 자체에 들어있는 아이콘-->        
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <h2>0</h2>
+                                    <h3>FOOD RECIPES</h3>
+                                    <h4><i class="icon-wallet"></i><span class="blind">icon</span></h4><!--브란도 폰트 자체에 들어있는 아이콘-->        
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section14" class="wheel-event">
+            <h2 class="hide">섹션14</h2>
+            <div class="wrap">
+                <div class="gap">
+                    <div class="title-wrap">
+                        <h2>CONTACT US</h2>
+                        <h3><img src="./img/separator.png" alt="separator"></h3>
+                    </div>
+                    <div class="container">
+                        <ul class="fixedclear">
+                            <li class="left">
+                                <div> <!-- margin:0 15px -->
+                                    <ul class="fixedclear">
+                                        <li>
+                                            <div class="icon-wrap"><span><i class="icon-map-pin"></i></span></div>
+                                            <div class="text-wrap">
+                                                <h4>OUR RESTAURANT</h4>
+                                                <h5>301 The Greenhouse,<br> Custard Factory,<br>London, E2 8DY.</h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-wrap"><span><i class="icon-clipboard"></i></span></div>
+                                            <div class="text-wrap">
+                                                <h4>GENERAL ENQUIRIES</h4>
+                                                <h5>sales@domain.com</h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-wrap"><span><i class="icon-phone"></i></span></div>
+                                            <div class="text-wrap">
+                                                <h4>CALL US</h4>
+                                                <h5>+44 (0) 123 456 7890</h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="right">
+                                <div>
+                                    <!-- 폼전송 -->
+                                    <form name="contact" id="contact" method="post" action="response.php"><!-- response.php를 만들면 메세지 전송이 가능 -->
+                                        <ul>
+                                            <li>
+                                                <div><input type="text" name="irum" id="irum" placeholder="*YOUR NAME" value=""></div>
+                                            </li>
+                                            <li>
+                                                <div><input type="email" name="mail" id="mail" placeholder="*YOUR EMAIL" value=""></div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                   <select name="interested" id="interested" >
+                                                       <option value="WHAT ARE YOU INTERESTED IN?" selected>WHAT ARE YOU INTERESTED IN?</option>
+                                                       <option value="Banquets & Catering">Banquets & Catering</option>
+                                                       <option value="Private Parties">Private Parties</option>
+                                                       <option value="Breakfast">Breakfast</option>
+                                                       <option value="Lunch">Lunch</option>
+                                                       <option value="Dinner">Dinner</option>
+                                                       <option value="Other">Other</option>
+                                                   </select>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <textarea name="message" id="message" placeholder="YOUR MESSAGE"></textarea>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div><input type="submit" name="submit" id="submit" value="SUBMIT">
+                                                    <span class="ajax-loader">
+                                                         <img src="./img/ajax-loader.gif" alt="ajax loader img">
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li class="error-mesage">
+                                                <div>Validation errors occurred. Please confirm the fields and submit it again.</div>
+                                            </li>
+                                            <li class="success-message">Your message was sent successfully. Thanks.</li>
+                                        </ul>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="wheel-event">
+        <div class="wrap">
+            <div class="gap">
+                <div class="title">
+                    <h2>CAN'T WAIT TO GET INVOLVED,<br> CONNECT WITH US NOW!</h2>    
+                </div>
+                <ul class="icons">
+                    <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" title="dribbble"><i class="fab fa-dribbble"></i></a></li>
+                    <li><a href="#" title="youtube"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#" title="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+                
+                <span class="h-line"><i></i></span>
+
+                <div class="logo-copyright">
+                    <h1><img src="./img/logo-restaurant-footer.png" alt="logo"></h1>
+                    <span>&copy; 2020 BRANDO IS PROUDLY POWERED BY THEMEZAA.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="goTop">
+            <a href="#intro" class="goTop-btn smooth-btn">
+                <span class="arrow-up">
+                    <i></i>
+                    <span class="txt-top">TOP</span>
+                </span>
+            </a>
+    </div>
+
+    <div class="modal">
+        <div class="img-wrap">
+            <a href="javascript:" class="img-btn" title="modal-image">
+                <img src="./img/restaurant-img25.jpg" alt="모달창 이미지 1">
+            </a>
+        </div>
+        <span class="arrow-left">
+            <a href="javascript:" class="arrow-left-btn">◁</a>
+        </span>
+        <span class="arrow-right">
+            <a href="javascript:" class="arrow-right-btn">▷</a>
+        </span>
+        <span class="close">
+            <a href="javascript:" class="close-btn" title="Close Button">×</a>
+        </span>
+    </div>
+    <div class="w3c">
+        <p>
+            <a href="http://validator.kldp.org/check?uri=referer"
+              onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))">
+              <img src="http://validator.kldp.org/w3cimgs/validate/html5-black.png" alt="Valid HTML 5" height="15" width="80">
+            </a>
+          </p>
+          <p>
+            <a href="http://css-validator.kldp.org/check/referer">
+                <img src="http://css-validator.kldp.org/images/validate/css-black" alt="올바른 CSS입니다!" 
+                style="border:0;width:80px;height:15px">
+            </a>
+        </p>
+    </div>
+    
+    <!-- 사용자 제작 -->
+    <script src="./js/brando_restaurant.js"></script>
+
+</div>
+</body>
+</html>

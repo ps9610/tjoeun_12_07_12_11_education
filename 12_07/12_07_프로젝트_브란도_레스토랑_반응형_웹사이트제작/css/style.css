@@ -1,0 +1,459 @@
+@charset "UTF-8";
+
+/* 공통요소 */
+.title-wrap {width:100%;text-align:center;padding-bottom:60px;}
+.title-wrap > h2 {font-size:28px;color:#614c45;font-weight:700;font-family:"Montserrat";}
+.title-wrap > h3 {padding-top:20px;}
+.title-wrap > h3 >img {width:auto;}
+
+
+#header {z-index:3;position:fixed;top:0;left:0;width:100%;border-bottom:1px solid rgba(225,225,225, 0.1);background:transparent;transition:height .3s,background-color .5s, top .4s;}
+#header.addMousewheel {top:-100px;}
+
+#header.addMobile {height:65px;background:rgba(0,0,0, .7);}
+#header .wrap {max-width:1170px;width:100%;margin:0 auto;}
+            /* ㄴ> 앞으로 반응형이니까 모두 max-width, width 같이 써줘야됨 */
+#header .wrap .gap {margin:0 15px;}
+#header .wrap .gap .left {float:left;padding:22.5px 0;transition:all .3s;}
+#header.addMobile .wrap .gap .left {padding:15px 0;}
+#header .wrap .gap .left .logo {display:inline-block;}
+#header .wrap .gap .left .logo > a {display:inline-block;}
+#header .wrap .gap .left .logo > a > img {width:156px;height:30px;}
+#header .wrap .gap .left .logo > i {display:inline-block;margin:0 30px 0 22px;width:1px;height:21px;background:#fff;opacity:.8;}
+
+#header .wrap .gap .left  #nav {display:inline-block;}
+#header .wrap .gap .left  #nav > ul {display:inline-block;}
+#header .wrap .gap .left  #nav > ul > li {display:inline-block;margin-right:38px;}
+#header .wrap .gap .left  #nav > ul > li:last-child {margin-right:0;}
+#header .wrap .gap .left  #nav > ul > li > a {color:#fff;font-size:12px;font-weight:700;transition:color .3s;}
+#header .wrap .gap .left  #nav > ul > li > a:hover {color:#ccc;}
+#header .wrap .gap .left  #nav > ul > li > a:focus {color:#ccc;}
+
+#header .wrap .gap .right {float:right;}
+#header .wrap .gap .right #aside {color:#fff;}
+#header .wrap .gap .right #aside > div {padding:26.5px 0;}
+#header.addMobile .wrap .gap .right #aside > div {padding:19px 0;}
+#header .wrap .gap .right #aside > div > span {display:inline-block;font-size:11px;font-weight:600;letter-spacing:.5px;}
+#header .wrap .gap .right #aside > div > span:nth-child(2) {margin-left:10px;}
+#header .wrap .gap .right #aside > div > span:nth-child(2) > a {display:block;padding:5.5px 12px;border:2px solid #fff;color:#fff;font-size:11px;transition:all .5s;}
+#header .wrap .gap .right #aside > div > span:nth-child(2) > a:hover {color:#000;background:#fff;}
+#header .wrap .gap .right #aside > div > span:nth-child(2) > a:focus {color:#000;background:#fff;}
+
+/* 모바일 전용 */
+#header .wrap .gap .right .mobile {display:none;width:22px;height:14px;margin:30.5px 0;transition:margin .3s;}
+#header.addMobile .wrap .gap .right .mobile {margin:23px 0;}
+#header .wrap .gap .right .mobile > a {position:relative;display:block;width:100%;height:100%;}
+#header .wrap .gap .right .mobile > a .mline {transition:all .3s;position:absolute;left:0;width:100%;height:2px;background:#fff;}
+#header .wrap .gap .right .mobile > a .mline1 {top:0;}
+#header .wrap .gap .right .mobile > a.addClose .mline1 {top:50%;margin-top:-1px;transform:rotate(45deg);}
+#header .wrap .gap .right .mobile > a .mline2 {top:50%;margin-top:-1px;}
+#header .wrap .gap .right .mobile > a.addClose .mline2 {display:none;}
+#header .wrap .gap .right .mobile > a .mline3 {bottom:0;}
+#header .wrap .gap .right .mobile > a.addClose .mline3 {bottom:50%;margin-bottom:-1px;transform:rotate(135deg);}
+
+/* 모바일 전용 메뉴 */
+#header .wrap .gap .right .mobile-menu {position:absolute;top:75px;right:-100%;width:100%;transition:top .2s;}
+#header.addMobile .wrap .gap .right .mobile-menu {top:60px;}
+#header .wrap .gap .right .mobile-menu > ul {width:100%;}
+#header .wrap .gap .right .mobile-menu > ul > li {text-indent:20px;/* 글자들여쓰기 */;border-top:1px solid #222;background:rgba(0,0,0, .7);}
+#header .wrap .gap .right .mobile-menu > ul > li > a {display:block;width:100%;line-height:50px;background:rgba(0,0,0, .7);color:#ccc;font-weight:600;font-size:12px;letter-spacing:2px;}
+
+
+#main   {z-index:2;position:relative;width:100%;}
+#main #section01/*넓이, 높이, 배경으로 확인하는게 제일 첫 순서*/ {z-index:1;position:relative;width:100%;height:969px;}
+#main #section01::after {z-index:2;position:absolute;content:"";display:block;top:0;left:0;width:100%;height:100%;background:#252525;opacity:.7;}
+#main #section01 .slide-container {z-index:1;/* 뒷배경같이 나와야되니까 */position:relative;width:100%;height:100%;}
+#main #section01 .slide-container .slide-view {position:relative;width:100%;height:100%;}
+#main #section01 .slide-container .slide-view .slide-wrap {position:relative;width:100%;height:100%;}
+#main #section01 .slide-container .slide-view .slide-wrap .slide {z-index:1;position:absolute;top:0;left:0;width:100%;height:100%;}
+#main #section01 .slide-container .slide-view .slide-wrap .slide0 {z-index:3;}/* 눈에 보이는 슬라이드 z-index:3; */
+#main #section01 .slide-container .slide-view .slide-wrap .slide1 /* cnt==0? 2:cnt-1 */ {z-index:2;} /* 3번 다음으로 보여져야 되는 슬라이드 z-index:2; */
+/* 슬라이드 3장이 하나로 포개져서 그 중에 하나만 보이고 나머지는 사라져야함, opacuty로 설정 */
+/* z-index를 안 쓴 상태에선 가장 나중에 배치한 슬라이드 3번이 제일 앞에 있음 */
+#main #section01 .slide-container .slide-view .slide-wrap .slide0 > div {width:100%;height:100%;overflow:hidden;/* 969높이로 짤림 */background:url(../img/slide00.jpg) no-repeat 50% 0;background-size:cover;}
+#main #section01 .slide-container .slide-view .slide-wrap .slide1 > div {width:100%;height:100%;overflow:hidden;background:url(../img/slide01.jpg) no-repeat 50% 0;background-size:100% 100%;}
+#main #section01 .slide-container .slide-view .slide-wrap .slide2 > div {width:100%;height:100%;overflow:hidden;background:url(../img/slide02.jpg) no-repeat 50% 0;background-size:cover;}
+#main #section01 .slide-container .slide-view .slide-wrap .slide3 > div {width:100%;height:100%;overflow:hidden;background:url(../img/slide03.jpg) no-repeat 50% 0;background-size:cover;}
+
+#main #section01 .hungry {z-index:3;position:absolute;display:inline-block;top:382px;width:100%;text-align:center;}/* 높이 잡으면 여기 박스도 반응형으로 만들어야되니까 높이X */
+#main #section01 .hungry > img {width:100%;max-width:542px;}/* max(min)-width ; 반응형할 때 많이 씀, hungry자체가 넓이 100%니까 max가 되는거임*/
+#main #section01 .arrow-down {z-index:4;position:absolute;bottom:60px;left:50%;margin-left:-16px;display:inline-block;width:32px;height:32px;}
+#main #section01 .arrow-down > a {display:block;width:100%;}
+#main #section01 .arrow-down > a > img {width:100%;}
+
+#main .section234 {width:100%;height:969px;background:url(../img/restaurant-img1.jpg) no-repeat 50% 0 fixed;background-size:cover;}
+#main .section234 .wrap {width:100%;max-width:1170px;margin:0 auto;height:100%;}
+#main .section234 .wrap .gap {margin:0 15px;height:100%;}
+#main .section234 .wrap .gap .container {position:relative;width:100%;}
+#main .section234 .wrap .gap .container .content-wrap {z-index:1;position:absolute;top:209.5px;margin-top:100px;opacity:0;transition:all .8s;right:0;/* right:345px */;width:100%;max-width:450px;height:550px;background:#fff;}
+#main .section234.addEvent .wrap .gap .container .content-wrap {margin-top:0;opacity:1;}
+#main .section234 .wrap .gap .container .content-wrap:after {z-index:2;position:absolute;top:5.090909%;left:6.222222%;content:"";display:block;width:87.555556%;height:89.818182%;outline:8px solid #d8b75f;} /* outline은 바깥쪽에서 그려진다는걸 생각하기, 익스플로러에서 바깥으로 안 나가게 하려고, 만약에 border해서 offset으로 설정하면 하위버전 호환 안됨 */
+/* 텍스트 박스 - 반응형은 너비기준으로 계산할지 높이기준으로 계산할지가 제일 중요 */
+#main .section234 .wrap .gap .container .content-wrap .text-gap {z-index:3;/* 링크걸려있어서 안정적으로 써주기 */position:relative;margin:/* 80px */17.777778%;}
+#main .section234 .wrap .gap .container .content-wrap .text-gap .text-wrap {text-align:center;}
+#main .section234 .wrap .gap .container .content-wrap .text-gap .text-wrap > h2 {width:100%;padding-bottom:/* 15px */5.172414%;}/* 패딩값 넓이 기준이라 백분율 맞춰놓기 -> 80픽셀 margin을 뺀 290px 너비가 기준 = 여기서부턴 콘텐츠 내용이니까*/
+#main .section234 .wrap .gap .container .content-wrap .text-gap .text-wrap > h2 > img {width:/* 45px */15.517241%;}
+#main .section234 .wrap .gap .container .content-wrap .text-gap .text-wrap > h3 {font-size:28px;padding-bottom:/* 15px */5.172414%;color:#614c45;font-family:"Montserrat";font-weight:600;}
+#main .section234 .wrap .gap .container .content-wrap .text-gap .text-wrap > h4 {font-size:11px;font-weight:500;letter-spacing:1px;padding-bottom:/* 35px */12.068966%;}
+#main .section234 .wrap .gap .container .content-wrap .text-gap .text-wrap > h5 {width:100%;padding-bottom:/* 20px */6.896552%;}
+#main .section234 .wrap .gap .container .content-wrap .text-gap .text-wrap > h5 > img {width:/* 178px */61.379310%;}
+#main .section234 .wrap .gap .container .content-wrap .text-gap .text-wrap > p {font-size:14px;line-height:180%;letter-spacing:.5px;padding-bottom:/* 30px */10.344828%;}
+#main .section234 .wrap .gap .container .content-wrap .text-gap .text-wrap > span {display:block;}
+#main .section234 .wrap .gap .container .content-wrap .text-gap .text-wrap > span > a {display:block;}/* 넓이,높이 잡아줘야 되니까 display:block */
+#main .section234 .wrap .gap .container .content-wrap .text-gap .text-wrap > span > a > img {width:/* 32px */11.034483%;}
+                                                                /* absolute도 position이니까 부모요소 될 수 있음 */ /* 패딩,마진 = 무조건 자기를 감싸는 부모영역의 너비에만 관계됨 */ /* 너비,left,right / 높이,top,bottom ->관계잘확인하기 */
+#main #section03 {width:100%;height:969px;background:url(../img/restaurant-img2.jpg) no-repeat 50% 0 fixed;background-size:cover;}
+#main #section03 .wrap .gap .container .content-wrap {left:0;/* left:345px */;}
+#main #section04 {width:100%;height:969px;background:url(../img/restaurant-img3.jpg) no-repeat 50% 0 fixed;background-size:cover;}
+
+
+
+#main #section05 {width:100%;height:auto;padding:130px 0;}
+/* #main #section05 .wrap {width:1170px;margin:0 auto;height:auto;} */
+#main #section05 .wrap {width:100%;max-width:1170px;height:auto;margin:0 auto 100px auto;opacity:0;transition:all .8s;}
+#main #section05.addEvent .wrap {margin:0 auto 0 auto;opacity:1;}
+/* #main #section05 .wrap .left-wrap {float:left;width:780px;height:auto;} */
+#main #section05 .wrap .left-wrap {float:left;width:66.6666667%;height:auto;}/* 현재는 100%면 1170px이 되기 때문에 max-width가 아닌 비율 계산을 해주어야 함  */
+#main #section05 .wrap .left-wrap .gap {margin:0 1.9230769%;}
+#main #section05 .wrap .left-wrap .gap .content {width:100%;}
+#main #section05 .wrap .left-wrap .gap .content > img {width:100%;}
+
+/* #main #section05 .wrap .right-wrap {float:left;width:390px;height:auto;padding-top:140px;} */
+#main #section05 .wrap .right-wrap {float:left;width:33.3333333%;height:auto;padding-top:140px;}
+#main #section05 .wrap .right-wrap .gap > .content {width:100%;}
+#main #section05 .wrap .right-wrap .gap > .content > h3 {font-size:15px;color:#626262;padding-bottom:15px;font-weight:600;font-family:"Montserrat";}
+#main #section05 .wrap .right-wrap .gap > .content > h2 {font-size:35px;color:#ababab;padding-bottom:20px;font-weight:700;font-family:"Montserrat";}
+#main #section05 .wrap .right-wrap .gap > .content > h4 {padding-bottom:20px;}
+#main #section05 .wrap .right-wrap .gap > .content > h4 > i {display:inline-block;width:30px;height:3px;background:#c8a64b;}
+#main #section05 .wrap .right-wrap .gap > .content > p {font-size:15px;color:#626262;line-height:170%;padding-bottom:20px;font-weight:100;}
+#main #section05 .wrap .right-wrap .gap > .content > span {display:block;}
+#main #section05 .wrap .right-wrap .gap > .content > span > a {font-size:11px;font-weight:600;font-family:"Montserrat";display:inline-block;padding:6px 20px;color:#000;background:transparent;border:4px solid #000;transition:all .3s;text-transform:uppercase;}
+#main #section05 .wrap .right-wrap .gap > .content > span > a:hover {color:#fff;background:#000;}
+
+#main #section06 {width:100%;height:740px;background:url(../img/restaurant-img7.jpg) no-repeat 50% 50%;background-size:cover;}
+#main #section06 .wrap {width:100%;height:100%;height:100%;}
+#main #section06 .wrap .container {width:100%;height:100%;max-height:740px;}
+#main #section06 .wrap .container > li {float:left;width:33.333333%;height:100%;}
+#main #section06 .wrap .container > li .gap {margin:0 15px;width:auto;height:100%;overflow:hidden;}
+#main #section06 .wrap .container > li .gap .content {position:relative;width:100%;height:100%;}
+#main #section06 .wrap .container > li:nth-child(1) .gap .content {margin-top:100px;opacity:0;transition:all .8s;background:url(../img/restaurant-img6.jpg) no-repeat 50% 50%;background-size:cover;}
+#main #section06.addEvent .wrap .container > li:nth-child(1) .gap .content {margin-top:0;opacity:1;}
+#main #section06 .wrap .container > li:nth-child(2) .gap .content {margin-top:100px;opacity:0;transition:all 1.2s;background:url(../img/restaurant-img17.jpg) no-repeat 50% 50%;background-size:cover;}
+#main #section06.addEvent .wrap .container > li:nth-child(2) .gap .content {margin-top:0;opacity:1;}
+#main #section06 .wrap .container > li:nth-child(3) .gap .content {margin-top:100px;opacity:0;transition:all 1.6s;background:url(../img/restaurant-img18.jpg) no-repeat 50% 50%;background-size:cover;}
+#main #section06.addEvent .wrap .container > li:nth-child(3) .gap .content {margin-top:0;opacity:1;}
+#main #section06 .wrap .container > li .gap .content .small-box {z-index:1;position:relative;top:22%;left:22%;width:56%;height:56%;background:#fff;text-align:center;transition:all .6s;} /* 넓이:362.6px;높이:444px; */
+#main #section06 .wrap .container > li .gap .content .small-box:after {content:'';display:block;z-index:2;position:absolute;top:6%;left:7%;width:86%;height:88%;outline:6px solid #e5e5e5;}
+#main #section06 .wrap .container > li .gap .content .small-box .small-box-gap {padding-top:70px;}
+#main #section06 .wrap .container > li .gap .content .small-box .small-box-gap .small-text-wrap {width:auto;}
+#main #section06 .wrap .container > li .gap .content .small-box .small-box-gap .small-text-wrap > h2 {padding-bottom:20px;}
+#main #section06 .wrap .container > li .gap .content .small-box .small-box-gap .small-text-wrap > h2 > img {width:150px;}
+#main #section06 .wrap .container > li .gap .content .small-box .small-box-gap .small-text-wrap > h3 {font-size:20px;color:#c8a64b;padding-bottom:13px;font-weight:700;font-family:"Montserrat";letter-spacing:0.5px;}
+#main #section06 .wrap .container > li .gap .content .small-box .small-box-gap .small-text-wrap > h4 {font-size:11px;color:#626262;padding-bottom:10px;letter-spacing:1px;}
+#main #section06 .wrap .container > li .gap .content .small-box .small-box-gap .small-text-wrap > h5 {width:auto;}
+#main #section06 .wrap .container > li .gap .content .small-box .small-box-gap .small-text-wrap > h5 > img {width:auto;}
+
+#main #section06 .wrap .container > li .gap .content .large-box {opacity:0;z-index:3;position:absolute;top:-10%;left:10%;width:80%;height:86%;background:url(../img/restaurant-img7.jpg) no-repeat 50% 50%; background-size:cover;outline:8px solid #c8a64b;transition:all .6s;}
+#main #section06 .wrap .container > li .gap .content:hover .large-box {opacity:1;top:7%;}/* 양 쪽에 마진 값 뺀 상태 */
+#main #section06 .wrap .container > li .gap .content:focus .large-box {opacity:1;top:7%;}/* html에 tabindex도 써줘야됨 */
+#main #section06 .wrap .container > li .gap .content .large-box .large-box-gap {margin:/* 40px */8.2735797%;} /* 패딩과 마진은 부모영역의 너비를 알아야 계산됨 */
+#main #section06 .wrap .container > li .gap .content .large-box .large-box-gap > ul {width:100%}
+#main #section06 .wrap .container > li .gap .content .large-box .large-box-gap > ul > li {border-bottom:1px solid #cecece;}
+#main #section06 .wrap .container > li .gap .content .large-box .large-box-gap > ul:last-child > li {border-bottom:0;}
+#main #section06 .wrap .container > li .gap .content .large-box .large-box-gap > ul > li > ul {width:100%;}
+#main #section06 .wrap .container > li .gap .content .large-box .large-box-gap > ul > li > ul > li {float:left;padding:1.0341975%/* 5px */ 0;}
+#main #section06 .wrap .container > li .gap .content .large-box .large-box-gap > ul > li > ul > li:nth-child(1) {width: 24.9182621%;}
+#main #section06 .wrap .container > li .gap .content .large-box .large-box-gap > ul > li > ul > li:nth-child(1) > div {padding:10.7909321%/* 13px */;}
+#main #section06 .wrap .container > li .gap .content .large-box .large-box-gap > ul > li > ul > li:nth-child(2) {width:75.0817319%;}
+#main #section06 .wrap .container > li .gap .content .large-box .large-box-gap > ul > li > ul > li:nth-child(2) > div {padding:5.5097155%/* 20px */ 0;}
+#main #section06 .wrap .container > li .gap .content .large-box .large-box-gap > ul > li > ul > li > div > img {width:100%;max-width:70px;border-radius:50%;}
+#main #section06 .wrap .container > li .gap .content .large-box .large-box-gap > ul > li > ul > li > div > h3 {font-size:13px;color:#614c45;font-weight:600;font-family:"Montserrat";padding-bottom:6px;}
+#main #section06 .wrap .container > li .gap .content .large-box .large-box-gap > ul > li > ul > li > div > p {font-size:13px;width:90%;color:#626262;line-height:150%;}
+
+#main #section07 {width:100%;height:auto;margin-top:300px;padding-top:130px;opacity:0;transition:all .8s;}
+#main #section07.addEvent {margin-top:0;opacity:1;}
+#main #section07 .wrap {width:100%;}
+#main #section07 .wrap .container {width:100%;}
+#main #section07 .wrap .container > ul {width:100%;}
+#main #section07 .wrap .container > ul > li {float:left;width:25%;overflow:hidden;}
+#main #section07 .wrap .container > ul > li:focus {outline:0;}
+#main #section07 .wrap .container > ul > li > div {position:relative;text-align:center;}
+#main #section07 .wrap .container > ul > li > div > img {z-index:1;position:relative;width:95%;transform:scale(1);opacity:1;filter:blur(0);transition:all .3s ease-in;}
+#main #section07 .wrap .container > ul > li:hover > div > img {opacity:0.5;transform:scale(1.1);filter:blur(3px);}
+#main #section07 .wrap .container > ul > li:focus > div > img {opacity:0.5;transform:scale(1.1);filter:blur(3px);}
+#main #section07 .wrap .container > ul > li > div > div {z-index:2;position:absolute;bottom:-50%;opacity:0;left:15%;width:70%;background:#614c45;}
+#main #section07 .wrap .container > ul > li:hover > div > div {bottom:40px;opacity:1;transition:all .6s;}
+#main #section07 .wrap .container > ul > li:focus > div > div {bottom:40px;opacity:1;transition:all .6s;}
+#main #section07 .wrap .container > ul > li > div > div > h6 {padding-bottom:25px;padding-top:40px;}
+#main #section07 .wrap .container > ul > li > div > div > h6 > i {display:inline-block;width:30px;height:4px;background:#c8a64b;}
+#main #section07 .wrap .container > ul > li > div > div > h2 {font-size:20px;color:#c8a64b;font-weight:600;padding-bottom:10px;}
+#main #section07 .wrap .container > ul > li > div > div > h3 {font-size:11px;color:#ababab;padding-bottom:20px;}
+#main #section07 .wrap .container > ul > li > div > div > p {font-size:14px;color:#ababab;padding:0 30px 50px 30px;line-height:160%;}
+
+#main #section08 {width:100%;height:auto;padding:130px 0;background:url(../img/restaurant-img24.jpg) 50% 50% fixed;background-size:cover;}
+#main #section08 .wrap {width:100%;max-width:1170px;margin:0 auto;transition:width 0.3s;}
+#main #section08 .wrap .gap {margin:0;}
+#main #section08 .wrap .gap .title-wrap {width:100%;margin-top:100px;opacity:0;transition:all .8s;}
+#main #section08.addEvent .wrap .gap .title-wrap {margin-top:0;opacity:1;}
+#main #section08 .wrap .gap .title-wrap > h2 {width:100%;}
+#main #section08 .wrap .gap .title-wrap > h2 > img {width:90%;max-width:483px;}
+#main #section08 .wrap .gap .container {width:100%;padding-top:30px;margin-top:100px;opacity:0;transition:all .8s;}
+#main #section08.addEvent .wrap .gap .container {margin-top:30px;opacity:1;}
+#main #section08 .wrap .gap .container > ul {width:100%;}
+#main #section08 .wrap .gap .container > ul > li {float:left;width:33.33333%;}
+#main #section08 .wrap .gap .container > ul > li > div {position:relative;max-width:360px;padding:0 15px;margin:0 auto;text-align:center;font-family:"Montserrat";}
+#main #section08 .wrap .gap .container > ul > li > div > img {width:100%;max-width:289px;transition:all .3s ease-in-out;}
+#main #section08 .wrap .gap .container > ul > li > div:focus > img {outline:none;}
+#main #section08 .wrap .gap .container > ul > li > div:hover > img {transform:scale(1.1);}
+#main #section08 .wrap .gap .container > ul > li > div:focus > img {transform:scale(1.1);}
+#main #section08 .wrap .gap .container > ul > li > div > h3 {font-size:18px;font-weight:600;color:#fff;padding:35px 0 15px 0;}
+#main #section08 .wrap .gap .container > ul > li > div > h4 {font-size:11px;font-weight:600;color:#ababab;}
+#main #section08 .wrap .gap .container > ul > li > div .only {position:absolute;top:0;right:0;display:table;width:90px;height:90px;background:#c33;border-radius:50%;}
+#main #section08 .wrap .gap .container > ul > li > div .only > span {display:table-cell;vertical-align:middle;line-height:120%;}/*부모영역을 table, 중앙정렬 해야 하는 자식요소를 table-cell하면 vertical-align이 적용됨*/
+#main #section08 .wrap .gap .container > ul > li > div .only > span > em {display:block;font-size:11px;font-weight:500;color:#fff;}
+#main #section08 .wrap .gap .container > ul > li > div .only > span > strong {display:block;font-size:18px;font-weight:600;color:#fff;}
+
+#main #section09 {width:100%;height:auto;margin-top:300px;padding-top:130px;opacity:0;transition:all .8s;overflow:hidden;}
+#main #section09.addEvent {margin-top:130px;opacity:1;}
+#main #section09 .wrap {width:100%;}
+#main #section09 .wrap .gap {width:100%}
+
+#main #section09 .wrap .gap .container {width:100%;}
+#main #section09 .wrap .gap .container .title {width:100%;text-align:center;}
+#main #section09 .wrap .gap .container .title > h2 {font-size:28px;font-weight:800;color:#614c45;padding-bottom:20px;}
+#main #section09 .wrap .gap .container .title > h3 {width:100%;}
+#main #section09 .wrap .gap .container .title > h3 > img {width:auto;}
+
+#main #section09 .wrap .gap .container .content {padding-top:70px;}
+#main #section09 .wrap .gap .container .content .gallery-nav {width:100%;padding-bottom:50px;}
+#main #section09 .wrap .gap .container .content .gallery-nav > ul {text-align:center;}
+#main #section09 .wrap .gap .container .content .gallery-nav > ul > li {display:inline-block;margin:0 25px;}
+#main #section09 .wrap .gap .container .content .gallery-nav > ul > li > a {display:block;color:#aaa;font-weight:600;letter-spacing:1px;padding-bottom:5px;border-bottom:2px solid transparent;transition:all .3s;}
+#main #section09 .wrap .gap .container .content .gallery-nav > ul > li > a:hover {color:#212121;border-bottom:2px solid #d8b75f;}
+#main #section09 .wrap .gap .container .content .gallery-nav > ul > li > a.addNav {cursor:default;color:#212121;border-bottom:2px solid #d8b75f;}
+/* 갤러리는 메뉴버튼을 누를때마다 이미지들의 배열이 자유롭기 때문에 abs 써줘야됨 / 갤러리 이해하기 전에 CSS 먼저 이해하기 */
+#main #section09 .wrap .gap .container .content .gallery {position:relative;width:100%;height:calc(356.8125px*2);} /* height:calc(356.8125px*2)없으면 섹션 9 높이 자체가 없어짐(relative-absolute이기 때문에) */
+#main #section09 .wrap .gap .container .content .gallery > li {position:absolute;overflow:hidden;/* transition:all .4s; */} /* {top:0;left:0;} */
+/* 갤러리 가로 4개인 경우 */ 
+#main #section09 .wrap .gap .container .content .gallery > li:nth-child(1) {top:calc(356.8125px*0);left:calc(25%*0);width:25%;height:356.8125px;} /* {top:0;left:0;} */
+#main #section09 .wrap .gap .container .content .gallery > li:nth-child(2) {top:calc(356.8125px*0);left:calc(25%*1);width:25%;height:356.8125px;} /* {top:0;left:25%;} */
+#main #section09 .wrap .gap .container .content .gallery > li:nth-child(3) {top:calc(356.8125px*0);left:calc(25%*2);width:25%;height:356.8125px;} /* {top:0;left:50%;} */
+#main #section09 .wrap .gap .container .content .gallery > li:nth-child(4) {top:calc(356.8125px*0);left:calc(25%*3);width:25%;height:356.8125px;} /* {top:0;left:75%;} */
+#main #section09 .wrap .gap .container .content .gallery > li:nth-child(5) {top:calc(356.8125px*1);left:calc(25%*0);width:25%;height:356.8125px;} /* {top:356.8125px;left:0%;} */
+#main #section09 .wrap .gap .container .content .gallery > li:nth-child(6) {top:calc(356.8125px*1);left:calc(25%*1);width:25%;height:356.8125px;} /* {top:356.8125px;left:25%;} */
+#main #section09 .wrap .gap .container .content .gallery > li:nth-child(7) {top:calc(356.8125px*1);left:calc(25%*2);width:25%;height:356.8125px;} /* {top:356.8125px;left:50%;} */
+#main #section09 .wrap .gap .container .content .gallery > li:nth-child(8) {top:calc(356.8125px*1);left:calc(25%*3);width:25%;height:356.8125px;} /* {top:356.8125px;left:75%;} */
+#main #section09 .wrap .gap .container .content .gallery > li > div {width:100%;transform:scale(0);transition:all .5s;}
+#main #section09 .wrap .gap .container .content .gallery.addZoom > li > div {transform:scale(1);}
+
+/* #main #section09 .wrap .gap .container .content .gallery > li:nth-child(1) > div {display:none;}
+#main #section09 .wrap .gap .container .content .gallery > li:nth-child(3) > div {display:none;}
+
+#main #section09 .wrap .gap .container .content .gallery > li:nth-child(2) > div {display:block;top:calc(356.8125px*0);left:calc(25%*0);}
+#main #section09 .wrap .gap .container .content .gallery > li:nth-child(4) > div {display:block;top:calc(356.8125px*0);left:calc(25%*0);}
+#main #section09 .wrap .gap .container .content .gallery > li:nth-child(5) > div {display:block;top:calc(356.8125px*0);left:calc(25%*0);}
+#main #section09 .wrap .gap .container .content .gallery > li:nth-child(6) > div {display:block;top:calc(356.8125px*0);left:calc(25%*0);}
+#main #section09 .wrap .gap .container .content .gallery > li:nth-child(7) > div {display:block;top:calc(356.8125px*0);left:calc(25%*0);}
+#main #section09 .wrap .gap .container .content .gallery > li:nth-child(8) > div {display:block;top:calc(356.8125px*0);left:calc(25%*0);} */
+
+#main #section09 .wrap .gap .container .content .gallery > li:hover > div {margin-top:-105px;}
+#main #section09 .wrap .gap .container .content .gallery > li > div a.gallery-img-btn {cursor:url(../img/icon-zoom.png),auto;}
+#main #section09 .wrap .gap .container .content .gallery > li > div a.gallery-img-btn > img {width:100%;transform:scale(.95);transition:transform .4s;}
+#main #section09 .wrap .gap .container .content .gallery > li.addZoom2 > div a.gallery-img-btn > img {transform:scale(1);}/* 칸 마다의 변화니까 li */
+
+#main #section09 .wrap .gap .container .content .gallery > li > div a.gallery-img-caption {display:block;width:100%;text-align:center;padding:20px 0 35px 0;text-transform:uppercase;background:url(../img/restaurant-img7.jpg);}
+#main #section09 .wrap .gap .container .content .gallery > li > div a.gallery-img-caption > strong {display:block;font-size:16px;font-weight:600;padding-bottom:10px;}
+#main #section09 .wrap .gap .container .content .gallery > li > div a.gallery-img-caption > strong > em {font-size:11px;}
+
+#main #section10 {width:100%;height:auto;margin-top:300px;padding:130px 0;opacity:0;transition:all .8s;overflow:hidden;}
+#main #section10.addEvent {margin-top:0;opacity:1;}
+#main #section10 .wrap {width:100%;max-width:1170px;margin:0 auto;}
+#main #section10 .wrap .gap {margin:0 15px;}
+#main #section10 .wrap .gap .container {width:100%;}
+#main #section10 .wrap .gap .container .slide-container {position:relative;width:100%;max-width:975px;margin:0 auto;}
+#main #section10 .wrap .gap .container .slide-container .slide-view {position:relative;width:100%;overflow:hidden;}/*우리 눈에 보여서 직접 조정할 수 있는*/
+#main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap {z-index:1;position:relative;width:calc(975px*3);left:calc(-975px*0);cursor:url(../img/icon-move.png),auto;}
+#main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide {float:left;width:100%;max-width:975px;/* 넓이는 975px이상 커지지 않는다, 975px=100% */}/* 1024이하 일 때 창너비 winW or max-width 사용*/
+#main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div {width:100%;}
+#main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box {width:100%;max-width:701.25px;margin:0 auto;}/* 1024이하 일 때 창너비 100% */
+#main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box .left {position:relative;float:left;width:200px;}/*여백없이*/ /* 1024이하 일 때 margin:0 auto; 플로트 해제하고 박스 가운데로*/
+#main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box .left .img-wrap {width:100%;height:200px;}
+#main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box .left .img-wrap > img {z-index:1;position:relative;width:100%;max-width:200px;border:7px solid #fff;box-sizing:border-box;border-radius:50%;}
+#main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box .left > span {display:block;z-index:2;position:absolute;top:40px;right:-27.5px;}
+#main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box .left > span > i {color:#614c45;font-size:55px;font-weight:900;}
+
+#main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box .right {float:left;width:501.125px;}/*여백다갖음*/ /* 1024이하 일 때 margin:0 auto; 플로트 해제하고 박스 가운데로 너비 최대 70~100% 중 적합한걸로 */
+#main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box .right .txt-wrap {margin-left:92.188px;padding-top:5px;} /* 1024이하 일 때 margin:0;padding-top:20px; */
+#main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box .right .txt-wrap > h3 {padding-bottom:20px;}
+#main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box .right .txt-wrap > h3 > span {margin-right:6px;}
+#main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box .right .txt-wrap > h3 > span > i {color:#c8a64b;font-size:17px;}
+#main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box .right .txt-wrap > h2 {font-size:18px;font-family:"Montserrat";color:#828282;padding-bottom:20px;text-transform:uppercase;font-weight:600;}
+#main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box .right .txt-wrap > p {font-size:13px;color:#828282;line-height:169%;width:85%;}/* 1024이하 일 때 너비 조정 적합하게 박스를 가운데로 조정 = margin 0 auto; */
+#main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box .right .txt-wrap > h6 {padding-top:20px;}
+#main #section10 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div .box .right .txt-wrap > h6 > i {display:inline-block;width:30px;height:4px;background:#c8a64b;}
+#main #section10 .wrap .gap .container .slide-container .slide-view .arrow-next {z-index:2;position:absolute;right:0;top:50%;margin-top:-25px;width:100px;height:100px;}
+#main #section10 .wrap .gap .container .slide-container .slide-view .arrow-next > a {display:block;text-align:center;height:50%;line-height:50px;width:50%;color:#000;transition:all .3s;background-color:rgba(0,0,0,0);border-radius:50%;}
+#main #section10 .wrap .gap .container .slide-container .slide-view .arrow-next > a:hover {background-color:rgba(0,0,0,.1);}
+#main #section10 .wrap .gap .container .slide-container .slide-view .arrow-next > a > i {font-size:30px;}
+#main #section10 .wrap .gap .container .slide-container .slide-view .arrow-prev {z-index:2;position:absolute;left:0;top:50%;margin-top:-25px;width:100px;height:100px;}
+#main #section10 .wrap .gap .container .slide-container .slide-view .arrow-prev > a {display:block;text-align:center;height:50%;line-height:50px;width:50%;color:#000;transition:all .3s;background-color:rgba(0,0,0,0);border-radius:50%;}
+#main #section10 .wrap .gap .container .slide-container .slide-view .arrow-prev > a:hover {background-color:rgba(0,0,0,.1);}
+#main #section10 .wrap .gap .container .slide-container .slide-view .arrow-prev > a > i {font-size:30px;}
+
+
+
+#main #section11 {z-index:1;position:relative;width:100%;height:auto;background:url(../img/slider-img6.jpg) 50% 50% fixed;background-size:cover;padding:130px 0;margin-top:300px;opacity:0;transition:all .8s;}
+#main #section11.addEvent {margin-top:0;opacity:1;}
+#main #section11:after {z-index:2;position:absolute;content:"";display:block;top:0;left:0;width:100%;height:100%;background:#252525;opacity:.8;}
+#main #section11 .wrap {z-index:3;position:relative;width:100%;max-width:1170px;margin:0 auto;}
+#main #section11 .wrap .gap {width:100%;}
+#main #section11 .wrap .gap .title-wrap > h2 {color:#fff;}
+#main #section11 .wrap .gap .container {width:100%;}
+#main #section11 .wrap .gap .container > ul {width:100%}
+#main #section11 .wrap .gap .container > ul > li {float:left;width:50%;}
+#main #section11 .wrap .gap .container > ul > li > div {margin:15px;}
+#main #section11 .wrap .gap .container > ul > li > div > ul {width:100%;background:#fff;}
+#main #section11 .wrap .gap .container > ul > li > div > ul > li {position:relative;float:left;width:50%;} /* 좌측 박스 높이로 우측 박스 js 사용하여 높이 설정 */
+#main #section11 .wrap .gap .container > ul > li > div > ul > li:nth-child(2) {height:227px;}
+#main #section11 .wrap .gap .container > ul > li > div > ul > li:nth-child(2):before {content:"";display:block;position:absolute;top:50%;left:-30px;margin-top:-15px;border:15px solid #fff;border-top:15px solid transparent;border-bottom:15px solid transparent;border-left:15px solid transparent;}
+#main #section11 .wrap .gap .container > ul > li > div > ul > li > div {width:100%;height:100%;overflow:hidden;display:table;}
+#main #section11 .wrap .gap .container > ul > li > div > ul > li > div > img {width:100%;transition:all .3s;}
+#main #section11 .wrap .gap .container > ul > li:hover > div > ul > li > div > img {transform:scale(1.15);}
+#main #section11 .wrap .gap .container > ul > li:focus > div > ul > li > div > img {transform:scale(1.15);}
+#main #section11 .wrap .gap .container > ul > li:focus {outline:0;}
+
+
+#main #section11 .wrap .gap .container > ul > li > div > ul > li > div > div {display:table-cell;vertical-align:middle;text-align:center;}/*부모의 높이가 있어서 table-cell, vertical 가능*/
+#main #section11 .wrap .gap .container > ul > li > div > ul > li > div > div > h3 {font-size:11px;line-height:20px;color:#ababab;}
+#main #section11 .wrap .gap .container > ul > li > div > ul > li > div > div > p {width:80%;margin:0 auto;font-size:20px;line-height:135%;padding:7.2202166% 0;}
+#main #section11 .wrap .gap .container > ul > li > div > ul > li > div > div > p > a {color:#626262;}
+#main #section11 .wrap .gap .container > ul > li > div > ul > li > div > div > h6 {width:100%;}
+#main #section11 .wrap .gap .container > ul > li > div > ul > li > div > div > h6 > i {width:30px;height:2px;display:inline-block;margin:0 auto;background:#c8a64b;}
+
+
+#main #section12 {width:100%;height:auto;background:url(../img/restaurant-img40.jpg) 50% 50%;background-size:cover;padding:130px 0;margin-top:100px;opacity:0;transition:all .8s;}
+#main #section12.addEvent {margin-top:0;opacity:1;}
+#main #section12 .wrap {width:100%;max-width:1170px;margin:0 auto;}
+#main #section12 .wrap .gap {margin:0 15px;}
+#main #section12 .wrap .gap .title-wrap {text-align:center;font-family:"Montserrat";}
+#main #section12 .wrap .gap .title-wrap > h3 {font-size:20px;font-weight:500;color:#626262;}
+#main #section12 .wrap .gap .title-wrap > h2 {font-size:40px;padding:20px 0 40px 0;font-weight:800;color:#614c45;}
+#main #section12 .wrap .gap .title-wrap > div {width:100%;}
+#main #section12 .wrap .gap .title-wrap > div > a {font-size:14px;padding:13px 27px;letter-spacing:.5px;display:inline-block;font-weight:600;color:#fff;background:#000;border:2px solid transparent;transition:all .5s;}
+#main #section12 .wrap .gap .title-wrap > div > a:hover {color:#000;border:2px solid #000;background:transparent;}
+
+#main #section13 {width:100%;height:auto;padding:114px 0 130px 0;margin-top:100px;opacity:0;transition:all .8s;}
+#main #section13.addEvent {margin:0;opacity:1;}
+#main #section13 .wrap {width:100%;max-width:1170px;margin:0 auto;}
+#main #section13 .wrap .gap {margin:0 15px;}
+#main #section13 .wrap .gap .container {width:100%;}
+#main #section13 .wrap .gap .container > ul {width:100%;}
+#main #section13 .wrap .gap .container > ul > li {float:left;width:25%;padding:35px 0}
+#main #section13 .wrap .gap .container > ul > li > div {border-right:1px solid #ddd;text-align:center;font-family:"Montserrat";}
+#main #section13 .wrap .gap .container > ul > li:last-child > div {border-right:1px solid transparent;}
+#main #section13 .wrap .gap .container > ul > li > div > h2 {color:#614c45;font-size:35px;font-weight:600;}
+#main #section13 .wrap .gap .container > ul > li > div > h3 {color:#626262;font-size:11px;font-weight:600;padding:15px 0;}
+#main #section13 .wrap .gap .container > ul > li > div > h4 {width:100%;}
+#main #section13 .wrap .gap .container > ul > li > div > h4 > i {color:#c8a64b;font-size:25px;}
+
+#main  #section14 {width:100%;height:auto;padding:130px 0;margin-top:100px;opacity:0;transition:all .8s;}
+#main  #section14.addEvent {margin-top:0;opacity:1;}
+#main  #section14 .wrap {width:100%;max-width:1170px;margin:0 auto;}
+#main  #section14 .wrap .gap {width:100%;}
+#main  #section14 .wrap .gap .container {width:100%;padding-top:40px;}
+#main  #section14 .wrap .gap .container > ul {width:100%;}
+#main  #section14 .wrap .gap .container > ul > li:first-child {float:left;width:41.6666667%;}
+#main  #section14 .wrap .gap .container > ul > li > div {margin:0 15px;}
+#main  #section14 .wrap .gap .container > ul > li > div > ul {width:100%;}
+#main  #section14 .wrap .gap .container > ul > li > div > ul > li {padding-bottom:60px;}
+#main  #section14 .wrap .gap .container > ul > li > div > ul > li div {display:inline-block;}
+#main  #section14 .wrap .gap .container > ul > li > div > ul > li .icon-wrap {width:80px;}
+#main  #section14 .wrap .gap .container > ul > li > div > ul > li .icon-wrap span i {font-size:40px;color:#c8a64b;}
+#main  #section14 .wrap .gap .container > ul > li > div > ul > li .text-wrap h4 {font-family:'Montserrat';font-size:15px;color:#000;font-weight:700;padding-bottom:6px;}
+#main  #section14 .wrap .gap .container > ul > li > div > ul > li .text-wrap h5 {font-size:14px;color:#626262;line-height:130%;}
+#main  #section14 .wrap .gap .container > ul > li > div > ul > li .text-wrap h5 > br:first-child {display:none;}
+
+#main  #section14 .wrap .gap .container > ul > li:last-child {float:left;width:58.3333333%;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div {margin:0 15px;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form {width:100%;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul {width:100%;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li {width:100%;padding-bottom:20px;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li > div {width:100%;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li > div input[type="text"] {outline:2px solid transparent;outline-offset:-2px;transition:outline .6s;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li > div input[type="text"]::placeholder {color:#aaa;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li > div input[type="text"]:focus {outline:2px solid #000;}
+
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li > div input[type="email"] {outline:2px solid transparent;outline-offset:-2px;transition:outline .6s;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li > div input[type="email"]::placeholder {color:#aaa;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li > div input[type="email"]:focus {outline:2px solid #000;}
+
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li > div select {background:#fff url(../img/select-arrow.png) no-repeat 98% 50%;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li > div select:focus {outline:0;}/* 일부 브라우저에서 크로스 브라우징을 하기 위해 필요하다*/
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li > div textarea {height:100px;outline:2px solid transparent;outline-offset:-2px;resize:none;transition:outline .6s;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li > div textarea::placeholder {color:#aaa;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li > div textarea:focus {outline:2px solid #000;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li > div input[type="submit"] {background:#000;color:#fff;font-size:13px;font-weight:600;border:2px solid #000;transition:all .3s;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li > div input[type="submit"]:hover {background:transparent;color:#000;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li:last-child {padding-bottom:0;padding-top:10px;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li.error-mesage div {display:none;padding-left:15px;line-height:30px;box-sizing:border-box;border:2px solid #ffb900;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li.success-message {display:none;padding-left:15px;line-height:30px;box-sizing:border-box;border:2px solid #46b450;}
+
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li > div .ajax-loader {display:none;padding-left:10px;width:16px;height:16px;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li > div .ajax-loader.addAjax {display:inline-block;padding-left:10px;width:16px;height:16px;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li > div .ajax-loader > img {width:16px;}
+
+/* 에러메세지 */
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li > div textarea.addError {outline:2px solid #d33;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li > div input.addError {outline:2px solid #d33;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li.error-mesage.addError div {display:block;}
+#main  #section14 .wrap .gap .container > ul > li:last-child > div form > ul > li.success-message.addSuccess {display:block;}
+
+#footer {z-index:1;position:relative;width:100%;padding:80px 0;background:url(../img/restaurant-img41.jpg) no-repeat 50% 50%;background-size:cover;}/* 모든 창높이는 본인 모니터의 창 높이로 */
+#footer:after {z-index:2;position:absolute;content:"";display:block;top:0;left:0;width:100%;height:100%;background:#252525;opacity:.5;}
+#footer .wrap {z-index:3;position:relative;width:100%;max-width:1170px;margin:0 auto;}
+#footer .wrap .gap {margin:0 15px;text-align:center;}
+#footer .wrap .gap .title {padding-bottom:40px;}
+#footer .wrap .gap .title > h2 {font-size:15px;font-weight:600;letter-spacing:1px;line-height:22px;color:#929292;font-family:"Montserrat";}
+
+#footer .wrap .gap .icons {width:100%;}
+#footer .wrap .gap .icons > li {display:inline-block;margin:0 3px;}
+#footer .wrap .gap .icons > li > a {display:block;width:30px;height:30px;line-height:30px;color:#fff;}
+#footer .wrap .gap .icons > li:nth-child(1) > a {background:#3b5998;}
+#footer .wrap .gap .icons > li:nth-child(2) > a {background:#00aced;}
+#footer .wrap .gap .icons > li:nth-child(3) > a {background:#ea4c89;}
+#footer .wrap .gap .icons > li:nth-child(4) > a {background:#b00;}
+#footer .wrap .gap .icons > li:nth-child(5) > a {background:#007bb6;}
+#footer .wrap .gap .icons > li > a > i {font-size:14px;}
+#footer .wrap .gap .h-line {display:block;width:100%;padding:70px 0;}
+#footer .wrap .gap .h-line > i {display:block;width:100%;height:1px;background:rgba(255,255,255,.1);}
+#footer .wrap .gap .logo-copyright {width:100%;}
+#footer .wrap .gap .logo-copyright > h1 {padding-bottom:20px;}
+#footer .wrap .gap .logo-copyright > h1 > img {width:156px;}
+#footer .wrap .gap .logo-copyright > span {color:#929292;font-size:12px;}
+
+.goTop {z-index:3/* z-index : 헤더랑 중복되면 3번, 아니면 4번 */;position:fixed;bottom:-100px;right:25px;width:50px;height:50px;border-radius:50%;overflow:hidden;transition:bottom .6s;}/* 오른쪽에 고정 */
+.goTop.addGotop {bottom:20px;opacity:1;}
+.goTop > a {display:block;width:100%;height:100%;text-align:center;opacity: .6;transition:opacity .3s;}
+.goTop > a:hover {opacity:1;}
+.goTop > a span.arrow-up {position:relative;display:block;width:100%;height:100%;background:rgba(0,0,0, .8);}
+.goTop > a span.arrow-up > i {position:absolute;top:15px;left:50%;margin-left:-8px;display:inline-block;width:15px;height:15px;border-top:1px solid #fff;border-right:1px solid #fff;transform:rotate(-45deg);}
+.goTop > a span.arrow-up span.txt-top {position:absolute;bottom:5px;left:0;width:100%;margin-top:25px;font-size:8px;color:#fff;}
+
+/* 모달창 */
+.modal {display:none;z-index:5;/* 홈페이지 통틀어 가장 위에 있어야 하니까 */position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;}/* 화면 전체를 사용하기 때문에 width, height 다 사용 */
+.modal .img-wrap {line-height:969px;text-align:center;cursor:url(../img/icon-zoom-out.png),auto/* url 못 가져오면 자동으로 커서 설정되게 하라 */;}
+.modal .img-wrap > a > img {width:100%;max-width:800px;/*항상 반응형은 width,max-width*/}
+
+.modal .arrow-left {z-index:2;position:absolute;top:50%;left:30px;width:50px;height:50px;margin-top:-25px;}
+.modal .arrow-left > a {display:block;text-align:center;font-size:50px;/*height:50px;이니까*/color:#444;font-weight:700;}
+.modal .arrow-left > a:hover {color:#000;}
+.modal .arrow-right {z-index:2;position:absolute;top:50%;right:30px;width:50px;height:50px;margin-top:-25px;}
+.modal .arrow-right > a {display:block;text-align:center;font-size:50px;/*height:50px;이니까*/color:#444;font-weight:700;}
+.modal .arrow-right > a:hover {color:#000;}
+
+.modal .close {z-index:2;position:absolute;top:0;right:0;width:30px;height:35px;}
+.modal .close a {display:block;line-height:30px;color:#fff;background:#000;font-size:20px;text-align:center;}
+.modal .close a:hover {background:#444;}
+
+.w3c {z-index:5;position:absolute;bottom:0;left:0;}
+.w3c > p {display:inline-block;}

@@ -1,0 +1,42 @@
+AJAX와 JSON을 이용한 스타벅스 게시판 
+
+- 게시판은 index.html말고 새로운 파일에 저장됨
+    ㄴ> css는 공용으로 사용
+
+- 스타벅스는 메뉴가 많기 때문에 인덱스 번호를 정확하게 부여해주어야함
+    ㄴ> 3depth의 형식 = main > sub > sub sub > sub sub sub >
+ 
+COFFEE / main-1
+    커피 / main-1-1
+       스타벅스 원두 / main-1-1-1
+       스타벅스 비아 / main-1-1-2
+       스타벅스 오리가미 / main-1-1-3
+MENU / main-2
+STORE / main-3
+RESPONSIBILITY / main-4
+STARBUCKS REWARD / main-5
+
+WHAT'S NEW / main-6
+    프로모션&이벤트 / main6-1 (main-btn)
+        전체 / main6-1-1 (sub-btn)
+        스타벅스 카드 / main6-1-2 (sub-sub-btn)
+        스타벅스 리워드 / main6-1-3
+        온라인 / main6-1-4
+        크리스마스 e-프리퀀시 증정품 / main6-1-5
+    새소식 / main6-2
+        전체 /main6-2-1
+        상품 출시 /main6-2-2
+        스타벅스와 문화 /main6-2-3
+        스타벅스 사회공헌 /main6-2-4
+        스타벅스 카드출시 /main6-2-5
+    매장별 이벤트 / main6-3
+        일반 매장 / main6-3-1
+        신규 매장/ main6-3-2
+    e-프리퀀시/  main6-4
+        이용안내 / main6-4-1
+        이용현황 / main6-4-2
+    ⭐공지사항 / main6-5
+        //서브 메뉴 없고 6-5 자체가 공지사항
+        // main 6-5.html 로 새 파일 만들어 사용
+    월페이퍼 / main6-6
+\

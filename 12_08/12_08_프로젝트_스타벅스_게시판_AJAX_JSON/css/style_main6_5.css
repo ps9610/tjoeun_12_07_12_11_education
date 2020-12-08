@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+#wrap #main6_5 {margin-top:123px;}
+#wrap #main6_5 #notice {width:100%;} 
+/* notice라는 아이디가 index파일과 같아도 부모요소가 다르기 때문에 완전 다른 요소가 되는 것 */
+#wrap #main6_5 #notice .wrap {width:1100px;margin:0 auto;} 
+#wrap #main6_5 #notice .wrap .title-wrap {width:100%;} 
+#wrap #main6_5 #notice .wrap .title-wrap .title {padding-top:30px;} 
+#wrap #main6_5 #notice .wrap .title-wrap .title > img {width:auto;} 
+
+#wrap #main6_5 #notice .wrap .title-wrap .link-wrap {width:100%;padding:20px 0;} 
+#wrap #main6_5 #notice .wrap .title-wrap .link-wrap > div {float:right;} 
+#wrap #main6_5 #notice .wrap .title-wrap .link-wrap > div > a {display:inline-block;color:#666;font-size:12px;} 
+#wrap #main6_5 #notice .wrap .title-wrap .link-wrap > div > a:hover {text-decoration:underline;} 
+#wrap #main6_5 #notice .wrap .title-wrap .link-wrap > div > a > img {width:auto;} 
+#wrap #main6_5 #notice .wrap .title-wrap .link-wrap > div > span {display:inline-block;margin:0 5px;color:#999;font-size:11px;}
+
+#wrap #main6_5 #notice .wrap .title-wrap .search-wrap {width:100%;background:#f4f4f2;} 
+#wrap #main6_5 #notice .wrap .title-wrap .search-wrap .gap {padding:20px 30px;} 
+#wrap #main6_5 #notice .wrap .title-wrap .search-wrap .gap > div  {float:right;} 
+#wrap #main6_5 #notice .wrap .title-wrap .search-wrap .gap > div > input {width:323px;height:38px;border:1px solid #ddd;background:#fff;border-radius 3px;}
+#wrap #main6_5 #notice .wrap .title-wrap .search-wrap .gap > div > input::placeholder {text-indent:15px;color:#999;font-size:13Px;} 
+#wrap #main6_5 #notice .wrap .title-wrap .search-wrap .gap > div > button {width:54px;height:38px;background:#777;font-size:14px;color:#fff;border-radius 3px;}
+
+#wrap #main6_5 #notice .wrap .title-wrap .notice-table {width:100%;padding-top:50px;padding-bottom:80px;} 
+#wrap #main6_5 #notice .wrap .title-wrap .notice-table table {width:100%;border-collapse:collapse;} 
+#wrap #main6_5 #notice .wrap .title-wrap .notice-table table tr {width:100%;}
+#wrap #main6_5 #notice .wrap .title-wrap .notice-table table tr th {border-top:1px solid #333;border-bottom:1px solid #333;height:50px;box-sizing:border-box;} /* 헤더부분, 가운데정렬자동됨 */
+/* #wrap #main6_5 #notice .wrap .title-wrap .notice-table table tr th:nth-child(1) {width:5.3636%;}
+#wrap #main6_5 #notice .wrap .title-wrap .notice-table table tr th:nth-child(2) {width:74.4545%;}
+#wrap #main6_5 #notice .wrap .title-wrap .notice-table table tr th:nth-child(3) {width:10.8182%;}
+#wrap #main6_5 #notice .wrap .title-wrap .notice-table table tr th:nth-child(4) {width:9.3636%;} 
+html colgroup > col 태그에서 한 번에 처리함*/
+#wrap #main6_5 #notice .wrap .title-wrap .notice-table table tr td {border-bottom:1px solid #ddd;height:53px;text-align:center;box-sizing:border-box;} 
+#wrap #main6_5 #notice .wrap .title-wrap .notice-table table tr td:nth-child(2) {text-align:left;} 
+/* 테이블 태그에 절대경로 표시하면 줄 안나옴!!!!!!! */

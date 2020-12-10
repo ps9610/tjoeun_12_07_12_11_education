@@ -2,22 +2,24 @@
     //서브페이지 공지사항 
     var notice = {
 
-        init  : function(){ //원래 init 혼자잇으면 프로퍼티 근데 함수가 들어가면 메소드가 됨
+        init  : function(){
+            // init:value인 경우, init이 property
+            // init:function(){}인 경우, init이 method 
             var that = this;
-
             that.ajaxFn();
             that.findFn();
         },
         ajaxFn : function(){
-            //외부데이터 JSON파일(notice.json) 호출 처리 실행
+            //외부데이터 JSON 파일(notice.json) 호출 처리 실행
                 //JSON : 객체 기반으로 만들어진 외부 데이터, 호환성이 아주 좋음
             //스토리보드 :
                 //게시판 목록 내용을 모두 JSON데이터 파일로 저장하고
+                    //먼저 JSON 파일 만들기
+                    //JSON 파일에 끌어모을 정보를 엑셀에 정리 후 cvs파일로 저장 + 복사
+                    //플러그인 파일 -> 컨버터로 cvs 파일 붙여넣기 -> JSON 형식으로 바꾸기 
                 //AJAX 처리해서(불러들여서) 데이터를 읽은 후 게시판 목록에 바인딩한다.
-                    //바인딩 : 글번호, 제목, 목록, 조회수 등을 홈페이지에 뿌려주는것
+                    //바인딩 : 글번호, 제목, 목록, 조회수 등 json의 내용을 홈페이지에 뿌려주는것
             //게시판 한 줄 = 레코드
-            //JSON 파일을 먼저 만들어줘야됨
-            //JSON 파일에 끌어모을 정보를 엑셀에 보기 좋게 정리 후 컨버터로 제이슨형식으로 바꿔서 
 
             var a = []; //2차원 배열 사용 준비 ->먼저 1차원부터 만들어주어야 함
             var txt = "";
@@ -26,17 +28,20 @@
 
             function ajaxProcessFn(){
                 $.ajax({
-                    //,property : value
+                    // property : value
                     url: "./data/json/notice.json", //외부 데이터 가져오기 방법
                     type : "POST",  //전송방식
                     dataType : "JSON",  //notice.json에 저장되어있는 문서타입
-                    success : function(result){   // function : 리터럴 객체방식 / data, result, object / 가장 많이 쓰는 매개변수
-                        //1. JSON 데이터 처리
-                        //json 데이터를 다 여기서 처리한다고 생각하면 됨
-                        //console.log("AJAX success result : ", result.제목, result.날짜);
+                    success : function(result){   
+                        // function(){} : 리터럴 객체방식 / ajax에서 가장 많이 쓰는 매개변수 = data, result, object
 
-                        //2. 객체 배열처리 each메서드사용해서 필드 분리 작업
-                       /*  $.each(result.공지사항, function(index, object){ //each는 배열처리니까 indexs매개변수 한개, 매개변수 객체(속성 / Property : Value) 총 2개를 가져오는거임
+                        // 1. JSON 데이터 처리
+                        // json 데이터를 다 여기서 처리한다고 생각하면 됨
+                        // console.log("AJAX success result : ", result.제목, result.날짜);
+
+                        //2. 객체 배열처리 : each메서드 사용해서 필드 분리 작업
+                       /*  $.each(result.공지사항, function(index, object){ 
+                           // indexs 순서 매개변수 한개, 객체 매개변수(Property : Value) 
                             console.log("AJAX success result : ", index, object.제목,object.날짜);
                         }); */
 

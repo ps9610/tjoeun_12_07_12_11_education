@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+#wrap #main6_5 {margin-top:123px;}
+#wrap #main6_5 #notice {width:100%;}
+#wrap #main6_5 #notice .wrap {width:1100px;margin:0 auto;}
+#wrap #main6_5 #notice .wrap .title-wrap {width:100%;}
+#wrap #main6_5 #notice .wrap .title-wrap .title {padding-top:30px;}
+#wrap #main6_5 #notice .wrap .title-wrap .title img {width:auto;}
+
+#wrap #main6_5 #notice .wrap .title-wrap .link-wrap {width:100%;padding:20px 0;}
+#wrap #main6_5 #notice .wrap .title-wrap .link-wrap div {float:right;}
+#wrap #main6_5 #notice .wrap .title-wrap .link-wrap div a {display:inline-block;color:#666;font-size:12px;}
+#wrap #main6_5 #notice .wrap .title-wrap .link-wrap div a:hover {text-decoration:underline;}
+#wrap #main6_5 #notice .wrap .title-wrap .link-wrap div a img {width:auto;}
+#wrap #main6_5 #notice .wrap .title-wrap .link-wrap div span {display:inline-block;margin:0 2px;color:#999;font-size:11px;}
+
+#wrap #main6_5 #notice .wrap .title-wrap .serarch-wrap {width:100%;background:#f4f4f2;}
+#wrap #main6_5 #notice .wrap .title-wrap .serarch-wrap .gap {padding:20px 30px;}
+#wrap #main6_5 #notice .wrap .title-wrap .serarch-wrap .gap div {float:right;}
+#wrap #main6_5 #notice .wrap .title-wrap .serarch-wrap .gap div input {border-radius:3px;width:323px;height:38px;border:1px solid #ddd;background:#fff;}
+#wrap #main6_5 #notice .wrap .title-wrap .serarch-wrap .gap div input::placeholder {text-indent:15px;color:#999;font-size:13px;}
+#wrap #main6_5 #notice .wrap .title-wrap .serarch-wrap .gap div button {border-radius:3px;width:54px;height:38px;background:#777;color:#fff;font-size:14px;}
+
+
+
+#wrap #main6_5 #notice .wrap .notice-table {width:100%;padding-top:50px;padding-bottom:50px;}
+/* 테이블을 ul li 사용 */
+
+#wrap #main6_5 #notice .wrap .notice-table dl {width:100%;}
+#wrap #main6_5 #notice .wrap .notice-table dl dt {width:100%;background:#f9f9f9;border-top:1px solid #aaa;border-bottom:1px solid #aaa;font-size:15px;font-weight:600;color:#000;}
+#wrap #main6_5 #notice .wrap .notice-table dl    span {float:left;display:block;line-height:50px;text-align:center;}
+#wrap #main6_5 #notice .wrap .notice-table dl    span:nth-child(1) {width:5.364%;}
+#wrap #main6_5 #notice .wrap .notice-table dl    span:nth-child(2) {width:74.455%;}
+#wrap #main6_5 #notice .wrap .notice-table dl    span:nth-child(3) {width:10.818%;}
+#wrap #main6_5 #notice .wrap .notice-table dl    span:nth-child(4) {width:9.364%;}
+
+#wrap #main6_5 #notice .wrap .notice-table dl dd {width:100%;background:#fff;border-bottom:1px solid #ddd;font-size:14px;font-weight:300;color:#555;}
+#wrap #main6_5 #notice .wrap .notice-table dl dd:hover {background:#f9f9f9;color:#000;}
+#wrap #main6_5 #notice .wrap .notice-table dl dd:after {content:'';display:block;clear:both;}
+#wrap #main6_5 #notice .wrap .notice-table dl dd span:nth-child(2) {text-indent:15px;text-align:left;}
+#wrap #main6_5 #notice .wrap .notice-table dl dd span  {line-height:48px;}
+
+
+
+
+
+/* 페이지 네이션 */
+#wrap #main6_5 #notice .wrap .page-wrap {width:100%;padding-bottom:100px;text-align:center;}
+#wrap #main6_5 #notice .wrap .page-wrap ul {display:inline-block;}
+#wrap #main6_5 #notice .wrap .page-wrap ul li {display:inline-block;margin:0 6px;}
+#wrap #main6_5 #notice .wrap .page-wrap ul li a {font-size:12px;display:inline-block;padding-bottom:3px;border-bottom:1px solid transparent;}
+#wrap #main6_5 #notice .wrap .page-wrap ul li a:hover {border-bottom:1px solid #393;color:#393;font-weight:bold;}
+#wrap #main6_5 #notice .wrap .page-wrap ul li a.addCurrent {border-bottom:1px solid #393;color:#393;font-weight:bold;}
+
+/* 그룹단위 화살버튼 */
+#wrap #main6_5 #notice .wrap .page-wrap span {display:inline-block;width:28px;height:27px;margin:0 5px;}
+#wrap #main6_5 #notice .wrap .page-wrap span a {display:inline-block;}
+#wrap #main6_5 #notice .wrap .page-wrap span a img {width:100%;}
+

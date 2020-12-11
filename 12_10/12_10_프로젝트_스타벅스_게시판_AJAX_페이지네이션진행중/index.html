@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Starbucks Coffee Korea</title>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=Edge"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- <meta name="Viewport" content="width=device-width, initial-scale=1.0"> (반응형 아니면 무조건 주석처리)-->
+    <meta name="Title" content="Starbucks Coffee Korea">
+    <meta name="Publisher" content="프론트엔드 박소혜">
+    <meta name="Author-date" content="2020-12-07"> 
+    <meta name="Author" content="Starbucks Coffee Company">
+    <meta name="Copyright" content="Starbucks Coffee Company">
+    <meta name="Keywords" content="Starbucks, Coffee, Korea, Starbucks Coffee Korea, Starbucks Coffee, Reserve, Caramel macciato, Dolce Latte, Ice Americano, Strawberry Yogurt, 스타벅스, 커피, 스타벅스코리아, 스타벅스 커피, 리저브, 카라멜마끼아또, 돌체라떼, 아이스아메리카노, 딸기요거트">
+    <meta name="description" content="스타벅스 코리아는 커피전문메이커, 미국브랜드입니다."> 
+    <meta name="Robots" content="index, follow">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="apple-touch-icon" href="./img/favicon.ico">
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <!-- 오픈소스 -->
+    
+    <script src="./js/lib/jquery-1.12.4.min.js"></script>
+    <!-- <script src="./js/lib/prefixfree.min.js"></script> -->
+    <script src="./js/lib/jquery.touchSwipe.js"></script> <!-- 터치 가능하게 해주는 제이쿼리 라이브러리 -->
+    <script src="./js/lib/jquery.easing.1.3.js"></script>
+
+    <!-- 조건 주석문 익스프롤러 하위 IE9 IE8 IE7 폴리필 -->
+    <!-- 스크립트 스타일 -->
+
+    <!--[if lte IE 9]>
+        <script src="./js/lib/IE9.js"></script>
+    <![endif]-->
+
+    <!--[if lte IE 8]>
+        <script src="./js/lib/html5shiv.min.js"></script>
+        <script src="./js/lib/jqPIE.js"></script>
+        <script src="./js/lib/PIE.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/ie8.css">
+    <![endif]-->
+
+    <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" href="./css/ie7.css">
+    <![endif]-->
+ 
+</head>
+<body>
+<ul id="skip">
+    <li><a href="#header" title="메뉴바로가기">메뉴바로가기</a></li>
+    <li><a href="#main" title="메인바로가기">메인바로가기</a></li>
+    <li><a href="#footer" title="하단바로가기">하단바로가기</a></li>
+</ul>
+<div id="wrap">
+    <header id="header">
+        <div class="wrap">
+            <ul class="fixedclear">
+                <li>
+                    <h1><a href="./index.html" title="logo"><img src="./img/logo.png" alt="logo"></a></h1>
+                </li>
+                <li>
+                    <ul>
+                        <li>
+                            <aside id="aside">
+                                <ul>
+                                    <li><a href="#" title="Sign In">Sign In</a></li>
+                                    <li><a href="#" title="My Starbucks">My Starbucks</a></li>
+                                    <li><a href="#" title="Customer Service & Ideas">Customer Service & Ideas</a></li>
+                                    <li><a href="#" title="Find a Store">Find a Store</a></li>
+                                    <li><a href="#" title="Search"><img src="./img/icon_magnifier_black.png" alt="Search"></a></li>
+                                </ul>
+                            </aside>
+                        </li> 
+                        <li>
+                            <nav id="nav">
+                                <ul class="fixedclear">
+                                    <li><a href="#" class="main-btn" title="COFFEE">COFFEE</a>
+                                    <div class="sub sub1">
+                                        <ul>
+                                            <li> <!-- 1행(top) --> <!-- 하나의 행에 여섯개의 칸 = 화면에는 1행에 5칸, 1칸은 밀려내려가게, 전체 100%를 20%씩 줘 -->
+                                            <div class="sub-wrap"> 
+                                                <ul class="fixedclear">
+                                                    <li> <!-- 첫번째칸 -->
+                                                        <ul>
+                                                            <li><a href="#" title="커피">커피</a></li>
+                                                            <li><a href="#" title="스타벅스 원두">스타벅스 원두</a></li>
+                                                            <li><a href="#" title="스타벅스 비아">스타벅스 비아</a></li>
+                                                            <li><a href="#" title="스타벅스 오리가미">스타벅스 오리가미</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li> <!-- 두번째칸 -->
+                                                        <ul>
+                                                            <li><a href="#" title="나와 어울리는 커피">나와 어울리는 커피</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li> <!-- 세번째칸 -->
+                                                        <ul>
+                                                            
+                                                            <li><a href="#" title="스타벅스 리저브™">스타벅스 리저브™</a></li>
+                                                            <li><a href="#" title="RESERVE MAGAZINE">RESERVE MAGAZINE</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li> <!-- 네번째칸 -->
+                                                        <ul>
+                                                            <li><a href="#" title="에스프레소 음료">에스프레소 음료</a></li>
+                                                            <li><a href="#" title="도피오">도피오</a></li>
+                                                            <li><a href="#" title="에스프레소 마키아또">에스프레소 마키아또</a></li>
+                                                            <li><a href="#" title="아메리카노">아메리카노</a></li>
+                                                            <li><a href="#" title="마끼아또">마끼아또</a></li>
+                                                            <li><a href="#" title="카푸치노">카푸치노</a></li>
+                                                            <li><a href="#" title="라떼">라떼</a></li>
+                                                            <li><a href="#" title="모카">모카</a></li>
+                                                            <li><a href="#" title="리스트레또 비안코">리스트레또 비안코</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li> <!-- 다섯번째칸 -->
+                                                        <ul>
+                                                            <li><a href="#" title="최상의 커피를 즐기는 법">최상의 커피를 즐기는 법</a></li>
+                                                            <li><a href="#" title="커피 프레스">커피 프레스</a></li>
+                                                            <li><a href="#" title="푸어 오버">푸어 오버</a></li>
+                                                            <li><a href="#" title="아이스 푸어 오버">아이스 푸어 오버</a></li>
+                                                            <li><a href="#" title="커피 메이커">커피 메이커</a></li>
+                                                            <li><a href="#" title="리저브를 매장에서 다양하게 즐기는 법">리저브를 매장에서 다양하게 즐기는 법</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+
+                                                <ul class="fixedclear"> <!-- 1-1행(float써줘서 밑으로 내려가니까 아예 행을 만들어줌) -->
+                                                    <li> <!-- 여섯번째칸 -->
+                                                        <ul>
+                                                            <li><a href="#" title="커피 이야기">커피 이야기</a></li>
+                                                            <li><a href="#" title="스타벅스 로스트 스팩트럼">스타벅스 로스트 스팩트럼</a></li>
+                                                            <li><a href="#" title="최상의 아라비카 원두한 잔의 커피가 완성되기까지">최상의 아라비카 원두한 잔의 커피가 완성되기까지</a></li>
+                                                            <li><a href="#" title="클로버® 커피 추출 시스템">클로버® 커피 추출 시스템</a></li>
+                                                            <li><a href="#" title="스타벅스 디카페인 ">스타벅스 디카페인 </a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+
+                                            </div> <!-- 1행 끝 -->
+                                            </li> 
+
+                                            <li><!-- 2행(bottom)-->
+                                                <div class="sub-wrap">
+                                                    <ul>
+                                                        <li><a href="#" title="나와 어울리는 커피">나와 어울리는 커피 찾기</a></li>
+                                                        <li>스타벅스가 여러분에게 어울리는 커피를 찾아드립니다.</li>
+                                                        <li><a href="#" title="최상의 커피를 즐기는 법">최상의 커피를 즐기는 법</a></li>
+                                                        <li>여러가지 방법을 통해 다양한 풍미의 커피를 즐겨보세요.</li>
+                                                    </ul>
+                                                </div>
+                                            </li> 
+                                        </ul>
+                                    </div>
+                                    </li>
+                                    <li><a href="#" class="main-btn" title="MENU">MENU</a>
+                                        <div class="sub sub2">
+                                        <ul>
+                                            <li> <!-- 1행(top) -->
+                                                <div class="sub-wrap">
+                                                    <ul class="fixedclear">
+                                                        <li>
+                                                            <ul>
+                                                                <li><a href="#" title="음료">음료</a></li>
+                                                                <li><a href="#" title="콜드 브루">콜드 브루</a></li>
+                                                                <li><a href="#" title="브루드 커피">브루드 커피</a></li>
+                                                                <li><a href="#" title="에스프레소">에스프레소</a></li>
+                                                                <li><a href="#" title="프라푸치노">프라푸치노</a></li>
+                                                                <li><a href="#" title="블렌디드">블렌디드</a></li>
+                                                                <li><a href="#" title="스타벅스 피지오">스타벅스 피지오</a></li>
+                                                                <li><a href="#" title="티(티바나)">티(티바나)</a></li>
+                                                                <li><a href="#" title="기타 제조 음료">기타 제조 음료</a></li>
+                                                                <li><a href="#" title="스타벅스 주스(병음료)">스타벅스 주스(병음료)</a></li>
+                                                            </ul>
+                                                        </li> <!-- 첫번째 칸 -->
+                                                        <li>
+                                                            <ul>
+                                                                <li><a href="#" title="푸드">푸드</a></li>
+                                                                <li><a href="#" title="브레드">브레드</a></li>
+                                                                <li><a href="#" title="케이크">케이크</a></li>
+                                                                <li><a href="#" title="샌드위치 & 샐러드">샌드위치 & 샐러드</a></li>
+                                                                <li><a href="#" title="따뜻한 푸드">따뜻한 푸드</a></li>
+                                                                <li><a href="#" title="과일 & 요거트">과일 & 요거트</a></li>
+                                                                <li><a href="#" title="스낵 & 미니 디저트">스낵 & 미니 디저트</a></li>
+                                                                <li><a href="#" title="아이스크림">아이스크림</a></li>
+                                                            </ul>
+                                                        </li> <!-- 두번째 칸 -->
+                                                        <li>
+                                                            <ul>
+                                                                <li><a href="#" title="상품">상품</a></li>
+                                                                <li><a href="#" title="머그">머그</a></li>
+                                                                <li><a href="#" title="글라스">글라스</a></li>
+                                                                <li><a href="#" title="플라스틱 텀블러">플라스틱 텀블러</a></li>
+                                                                <li><a href="#" title="스테인리스 텀블러">스테인리스 텀블러</a></li>
+                                                                <li><a href="#" title="보온병">보온병</a></li>
+                                                                <li><a href="#" title="액세서리">액세서리</a></li>
+                                                                <li><a href="#" title="커피 용품">커피 용품</a></li>
+                                                                <li><a href="#" title="패키지 티(티바나)">패키지 티(티바나)</a></li>
+                                                                <li><a href="#" title="스타벅스 플래너">스타벅스 플래너</a></li>
+                                                            </ul>
+                                                        </li> <!-- 세번째 칸 -->
+                                                        <li>
+                                                            <ul>
+                                                                <li><a href="#" title="카드">카드</a></li>
+                                                                <li><a href="#" title="실물카드">실물카드</a></li>
+                                                                <li><a href="#" title="e-Gift 카드">e-Gift 카드</a></li>
+                                                            </ul>
+                                                        </li> <!-- 네번째 칸 -->
+                                                        <li>
+                                                            <ul>
+                                                                <li><a href="#" title="메뉴 이야기">메뉴 이야기</a></li>
+                                                                <li><a href="#" title="나이트로 콜드브루">나이트로 콜드브루</a></li>
+                                                                <li><a href="#" title="콜드 브루">콜드 브루</a></li>
+                                                                <li><a href="#" title="스타벅스 티바나 ">스타벅스 티바나 </a></li>
+                                                            </ul>
+                                                        </li> <!-- 다섯번째 칸 -->
+                                                    </ul>
+                                                </div>
+
+                                            </li> 
+                                            <li> <!-- 2행(bottom) -->
+                                                <div class="sub-wrap">
+                                                    <ul>
+                                                        <li><a href="#" title="나이트로 콜드 브루">나이트로 콜드 브루<img src="./img/icon_gnb_new.png" alt="new icon img"></a></li>
+                                                        <li>나이트로 커피 정통의 물결치듯 흘러내리는 캐스케이딩과 부드러운 크림을 경험하세요.</li>
+                                                    </ul>
+                                                </div>
+                                            </li> 
+
+                                        </ul>
+                                    </div>
+                                    </li>
+                                    <li><a href="#" class="main-btn" title="STORE">STORE</a>
+                                        <div class="sub sub3">
+                                        <ul>
+                                            <li> <!-- 1행(top) -->
+                                            <div class="sub-wrap">
+                                                <ul class="fixedclear">
+                                                    <li>
+                                                        <ul>
+                                                            <li><a href="#" title="매장 찾기">매장 찾기</a></li>
+                                                            <li><a href="#" title="퀵 검색">퀵 검색</a></li>
+                                                            <li><a href="#" title="지역 검색">지역 검색</a></li>
+                                                            <li><a href="#" title="My 매장">My 매장</a></li>
+                                                        </ul>
+                                                    </li> <!-- 첫번째 칸 -->
+                                                    <li>
+                                                        <ul>
+                                                            <li><a href="#" title="드라이브 스루 매장">드라이브 스루 매장</a></li>
+                                                        </ul>
+                                                    </li> <!-- 두번째 칸 -->
+                                                    <li>
+                                                        <ul>
+                                                            <li><a href="#" title="스타벅스 리저브™ 매장">스타벅스 리저브™ 매장</a></li>
+                                                        </ul>
+                                                    </li> <!-- 세번째 칸 -->
+                                                    <li>
+                                                        <ul>
+                                                            <li><a href="#" title="커뮤니티 스토어 매장">커뮤니티 스토어 매장</a></li>
+                                                        </ul>
+                                                    </li> <!-- 네번째 칸 -->
+                                                    <li>
+                                                        <ul>
+                                                            <li><a href="#" title="매장 이야기">매장 이야기</a></li>
+                                                            <li><a href="#" title="청담스타">청담스타</a></li>
+                                                            <li><a href="#" title="티바나 바 매장">티바나 바 매장</a></li>
+                                                            <li><a href="#" title="파미에파크">파미에파크</a></li>
+                                                        </ul>
+                                                    </li> <!-- 다섯번째 칸 -->
+                                                </ul>
+                                            </div>
+                                            </li> 
+                                            <li> <!-- 2행(bottom) -->
+                                            <div class="sub-wrap">
+                                                <ul>
+                                                    <li><a href="#" title="매장찾기">매장찾기</a></li>                  <!-- 첫번째 칸 -->
+                                                    <li>보다 빠르게 매장을 찾아보세요.</li>                             <!-- 두번째 칸 -->
+                                                    <li><a href="#" title="이대R점">이대R점<img src="./img/icon_gnb_new.png" alt="new icon img"></a></li>                    <!-- 세번째 칸 -->
+                                                    <li>1호점 특화 MD와 티바나 티, 최고의 리저브 커피를 만나보세요.</li> <!-- 네번째 칸 -->
+                                                </ul>
+                                            </div>
+                                            </li> 
+                                        </ul>
+                                    </div>
+                                    </li>
+                                    <li><a href="#" class="main-btn" title="RESPONSIBILITY">RESPONSIBILITY</a>
+                                        <div class="sub sub4">
+                                        <ul>
+                                            <li>
+                                            <div class="sub-wrap">                      
+                                                <ul class="fixedclear">
+                                                    <li>
+                                                        <ul>
+                                                            <li><a href="#" title="사회 공헌 캠페인 소개">사회 공헌 캠페인 소개</a></li>
+                                                        </ul>
+                                                    </li> <!-- 첫번째칸 -->
+                                                    <li>
+                                                        <ul>
+                                                            <li><a href="#" title="지역 사회 참여 활동">지역 사회 참여 활동</a></li>
+                                                            <li><a href="#" title="희망배달 캠페인">희망배달 캠페인</a></li>
+                                                            <li><a href="#" title="재능기부 카페 소식">재능기부 카페 소식</a></li>
+                                                            <li><a href="#" title="커뮤니티 스토어">커뮤니티 스토어</a></li>
+                                                            <li><a href="#" title="청년인재 양성">청년인재 양성</a></li>
+                                                            <li><a href="#" title="우리 농산물 사랑 캠페인">우리 농산물 사랑 캠페인</a></li>
+                                                            <li><a href="#" title="우리 문화 지키기">우리 문화 지키기</a></li>
+                                                        </ul>
+                                                    </li> <!-- 두번째칸 --> 
+                                                    <li>
+                                                        <ul>
+                                                            <li><a href="#" title="환경보호 활동">환경보호 활동</a></li>
+                                                            <li><a href="#" title="환경 발자국 줄이기">환경 발자국 줄이기</a></li>
+                                                            <li><a href="#" title="일회용 컵 없는 매장">일회용 컵 없는 매장</a></li>
+                                                            <li><a href="#" title="커피 원두 재활용">커피 원두 재활용</a></li>
+                                                        </ul>
+                                                    </li> <!-- 세번째칸 -->
+                                                    <li>
+                                                        <ul>
+                                                            <li><a href="#" title="윤리 구매">윤리 구매</a></li>
+                                                            <li><a href="#" title="윤리적 원두 구매">윤리적 원두 구매</a></li>
+                                                            <li><a href="#" title="공정무역 인증">공정무역 인증</a></li>
+                                                            <li><a href="#" title="커피 농가 지원 활동">커피 농가 지원 활동</a></li>
+                                                        </ul>
+                                                    </li> <!-- 네번째칸 -->
+                                                    <li>
+                                                        <ul>
+                                                            <li><a href="#" title="글로벌 사회 공헌">글로벌 사회 공헌</a></li>
+                                                            <li><a href="#" title="윤리경영 보고서">윤리경영 보고서</a></li>
+                                                            <li><a href="#" title="스타벅스 재단">스타벅스 재단</a></li>
+                                                            <li><a href="#" title="지구촌 봉사의 달 ">지구촌 봉사의 달 </a></li>
+                                                        </ul>
+                                                    </li> <!-- 다섯번째칸 -->
+                                                </ul>
+                                            </div>
+                                            </li> 
+                                            <li>
+                                                <div class="sub-wrap">
+                                                    <ul>
+                                                        <li><a href="#" title="커피원두 재활용">커피원두 재활용</a></li> <!-- 첫번째칸 -->
+                                                        <li>스타벅스 커피 원두를 재활용해 보세요.</li> <!-- 두번째칸 -->
+                                                    </ul>
+                                                </div>
+                                            </li> 
+                                        </ul>
+                                    </div>
+                                    </li>
+                                    <li><a href="#" class="main-btn" title="STARBUCKS REWARDS">STARBUCKS REWARDS</a>
+                                        <div class="sub sub5">
+                                        <ul>
+                                            <li>
+                                            <div class="sub-wrap">
+                                                <ul class="fixedclear">
+                                                    <li>
+                                                        <ul>
+                                                            <li><a href="#" title="스타벅스 리워드">스타벅스 리워드</a></li>
+                                                            <li><a href="#" title="스타벅스 리워드 소개">스타벅스 리워드 소개</a></li>
+                                                            <li><a href="#" title="등급 및 혜택">등급 및 혜택</a></li>
+                                                            <li><a href="#" title="스타벅스 별">스타벅스 별</a></li>
+                                                            <li><a href="#" title="자주하는 질문">자주하는 질문</a></li>
+                                                            
+                                                        </ul>
+                                                    </li> <!-- 첫번째칸 -->
+                                                    <li>
+                                                        <ul>
+                                                            <li><a href="#" title="스타벅스 카드">스타벅스 카드</a></li>
+                                                            <li><a href="#" title="스타벅스 카드 소개">스타벅스 카드 소개</a></li>
+                                                            <li><a href="#" title="스타벅스 카드 갤러리">스타벅스 카드 갤러리</a></li>
+                                                            <li><a href="#" title="등록 및 조회">등록 및 조회</a></li>
+                                                            <li><a href="#" title="충전 및 이용안내">충전 및 이용안내</a></li>
+                                                            <li><a href="#" title="분실신고/환불신청">분실신고/환불신청</a></li>
+                                                            <li><a href="#" title="자주하는 질문">자주하는 질문</a></li>
+                                                        </ul>
+                                                    </li> <!-- 두번째칸 -->
+                                                    <li>
+                                                        <ul>
+                                                            <li><a href="#" title="스타벅스 e-Gift Card">스타벅스 e-Gift Card</a></li>
+                                                            <li><a href="#" title="스타벅스 e-Gift Card 소개">스타벅스 e-Gift Card 소개</a></li>
+                                                            <li><a href="#" title="이용안내">이용안내</a></li>
+                                                            <li><a href="#" title="선물하기">선물하기</a></li>
+                                                            <li><a href="#" title="자주하는 질문">자주하는 질문</a></li>
+                                                        </ul>
+                                                    </li> <!-- 세번째칸 -->
+                                                </ul>
+                                            </div>
+                                            </li> 
+                                            <li>
+                                                <div class="sub-wrap">
+                                                    <ul>
+                                                        <li><a href="#" title="스타벅스 카드 등록">스타벅스 카드 등록하기</a></li>
+                                                        <li>카드 등록 후 리워드 서비스를 누리고 사용내역도 조회해보세요.</li>
+                                                    </ul>
+                                                </div>
+                                            </li> 
+                                        </ul>
+                                    </div>
+                                    </li>
+                                    <li><a href="#" class="main-btn" title="WHAT'S NEW">WHAT'S NEW</a>
+                                        <div class="sub sub6">
+                                        <ul>
+                                            <li>
+                                            <div class="sub-wrap">
+                                                <ul class="fixedclear">
+                                                    <li>
+                                                        <ul>
+                                                            <li><a href="#" title="프로모션&이벤트">프로모션&이벤트</a></li>
+                                                            <li><a href="#" title="전체">전체</a></li>
+                                                            <li><a href="#" title="스타벅스 카드">스타벅스 카드</a></li>
+                                                            <li><a href="#" title="스타벅스 리워드">스타벅스 리워드</a></li>
+                                                            <li><a href="#" title="온라인">온라인</a></li>
+                                                        </ul>
+                                                    </li> <!-- 첫번째 칸 -->
+                                                    <li>
+                                                        <ul>
+                                                            <li><a href="#" title="새소식">새소식</a></li>
+                                                            <li><a href="#" title="전체">전체</a></li>
+                                                            <li><a href="#" title="상품 출시">상품 출시</a></li>
+                                                            <li><a href="#" title="스타벅스와 문화">스타벅스와 문화</a></li>
+                                                            <li><a href="#" title="스타벅스 사회 공헌">스타벅스 사회 공헌</a></li>
+                                                            <li><a href="#" title="스타벅스 카드출시">스타벅스 카드출시</a></li>
+                                                        </ul>
+                                                    </li> <!-- 두번째 칸 -->
+                                                    <li>
+                                                        <ul>
+                                                            <li><a href="#" title="매장별 이벤트">매장별 이벤트</a></li>
+                                                            <li><a href="#" title="일반 매장">일반 매장</a></li>
+                                                            <li><a href="#" title="신규 매장">신규 매장</a></li>
+                                                        </ul>
+                                                    </li> <!-- 세번째 칸 -->
+                                                    <li>
+                                                        <ul>
+                                                            <li><a href="main6_5.html" title="공지사항">공지사항</a></li>
+                                                            <!-- 정확하게는 a href="./main6_5.html" taget="_self" title="공지사항"-->
+                                                        </ul>
+                                                    </li> <!-- 네번째 칸 -->
+                                                    <li>
+                                                        <ul>
+                                                            <li><a href="#" title="월페이퍼">월페이퍼</a></li>
+                                                        </ul>
+                                                    </li> <!-- 다섯번째 칸 -->
+                                                </ul>
+                                            </div>
+                                            </li> 
+                                            <li>
+                                                <div class="sub-wrap">
+                                                    <ul>
+                                                        <li><a href="#" title="매장별 이벤트">매장별 이벤트</a></li>
+                                                        <li>스타벅스의 매장 이벤트 정보를 확인 하실 수 있습니다.</li>
+                                                        <li><a href="#" title="월페이퍼">월페이퍼</a></li>
+                                                        <li>매월 업데이트되는 월페이퍼(PC/Mobile)로 스타벅스를 더욱 가깝게 즐겨보세요!</li>
+                                                    </ul>
+                                                </div>
+                                            </li> 
+                                        </ul>
+                                    </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="main">
+        <section id="section1">
+            <h2 class="hide">섹션1</h2>
+            <div class="wrap"> 
+                <span class="ani ani-1">
+                    <strong><img src="./img/2020_autumn1_glazed_latte_tit_1.png" alt="블랙 글레이즈드 라떼 타이틀"></strong> <!-- title -->
+                    <a href="#" title="블랙 글레이즈드 라떼"><img src="./img/2020_autumn1_glazed_latte.png" alt="블랙 글레이즈드 라떼"></a>
+                </span>
+                <span class="ani ani-2">
+                    <strong><img src="./img/2020_autumn1_oat_chocolat_tit_1.png" alt="헤이즐넛 오트 쇼콜라 타이틀"></strong> <!-- title -->
+                    <a href="#" title="헤이즐넛 오트 쇼콜라"><img src="./img/2020_autumn1_oat_chocolat_1.png" alt="헤이즐넛 오트 쇼콜라"></a>
+                </span>
+                <span class="ani ani-3">
+                    <strong><img src="./img/2020_autumn1_apple_latte_tit_1.png" alt="애플 쿠키 라떼 타이틀"></strong> <!-- title -->
+                    <a href="#" title="애플 쿠키 라떼"><img src="./img/2020_autumn1_apple_latte.png" alt="애플 쿠키 라떼"></a>
+                </span>
+                <span class="ani ani-4">
+                    <strong><img src="./img/2020_autumn1_frappuccino_tit.png" alt="애플 쿠키 크림 프라푸치노 타이틀"></strong> <!-- title -->
+                    <a href="#" title="애플 쿠키 크림 프라푸치노"><img src="./img/2020_autumn1_frappuccino_1.png" alt="애플 쿠키 크림 프라푸치노"></a>
+                </span>
+                <span class="ani ani-5">
+                    <strong><img src="./img/2020_autumn1_emblem.png" alt=""></strong> <!-- title -->
+                </span>
+                <span class="ani ani-6">
+                    <a href="#" class="viewBtn" title="자세히 보기">자세히 보기</a><!-- button -->
+                </span>
+            </div>
+        </section>
+
+        <section id="section2">
+            <h2 class="hide">섹션</h2>
+            <ul class="fixedclear">
+                <li class="fixedclear">
+                <div class="left-wrap">
+                    <h2 class="notice-title"> <!-- 공지사항(하얀색글씨) -->
+                        <img src="./img/notice_ttl.png" alt="notice-title">
+                    </h2>
+                    <ul class="notice-list">
+                        <li><a href="#" title="시스템 개선 및 점검 안내">시스템 개선 및 점검 안내</a></li>
+                        <li><a href="#" title="개인정보 처리방침 개정안내">개인정보 처리방침 개정안내</a></li>
+                        <li><a href="#" title="스타벅스 카드 이용약관 개정 공지">스타벅스 카드 이용약관 개정 공지</a></li>
+                        <li><a href="#" title="추석 연휴 매장 영업시간 변경 안내">추석 연휴 매장 영업시간 변경 안내</a></li>
+                        <li><a href="#" title="스타벅스 카드/홈페이지 이용약관 개정안내">스타벅스 카드/홈페이지 이용약관 개정안내</a></li>
+                    </ul>
+                    <span class="notice-more"> <!-- (+)버튼 -->
+                        <a href="./main6_5.html" title="공지사항 더보기"><img src="./img/btn_notice_plus.png" alt="notice-more-btn"></a>
+                    </span>
+                </div>
+                </li>
+                <li>
+                    <div class="right-wrap">
+                        <h2><a href="#" class="promotion-btn" title="프로모션 더보기"><img src="./img/prom_ttl_b.png" alt="스타벅스 프로모션"></a></h2>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="section3"> 
+            <!-- 
+            메인 슬라이드 분석
+                1. 슬라이드 이미지 4개
+                2. 맨앞에 4개, 맨 뒤에 추가(앞에꺼 부드럽게 하려고) = 6개 롤링
+                3. = 실제로는 4개임 (4 1 2 3 4 1) (4 1 2 3 4 1) (4 1 2 3 4 1) 
+                    ⭐슬라이드 배치
+                        - 정중앙 819
+                        - 해당(Current) 슬라이드(메인) : opacity:1로 설정
+                        - 그 외 슬라이드 : opacity : .5; 
+                        - 우->좌로 이동
+                3. 슬라이드 넓이 819 * 높이 553
+                4. 슬라이드 간의 바깥 여백 0 5px
+                    자세히 보기: 너비 120px 높이 35px border 2px solid #222;
+                5. 이미지 위에다가 자세히보기 버튼(abs->z-index)
+                6. 섹션 <-> 슬라이드 사이 여백 40px
+                7. 좌우버튼 : 50*50 border:2px solid #222; 백그라운드url이용, 섹션안에서 가운데정렬 후 살짝 올리기 
+                8. 페이지버튼 박스 : 정지, 플레이 - 백그라운드 url이용, 버튼크기 :12*12, 인라인블럭으로 사이 간격 margin : 4px
+                                   : 현재버튼 녹색보더, 나머지배경 회색
+            -->
+            <h2 class="hide">섹션</h2>
+            <div class="wrap"> <!-- 슬라이드는 항상 컨.뷰.렙 -->
+                <div class="slide-container"> <!-- 좌우화살버튼, invigate 버튼 -->
+                    <div class="slide-view"> <!-- 슬라이드 갯수(화면 너비) 고정해줌 -->
+                        <ul class="slide-wrap fixedclear"> <!-- 애니메이션 대상  -->
+                            <!-- <li class="slide-css slide0-js"><div><img src="" alt=""></div></li> -->
+                            <li class="slide slide3"><div><img src="./img/slide_03.jpg" alt="">
+                                                          <span><a href="#" title="자세히 보기">자세히 보기</a></span></div></li>
+                            <li class="slide slide1 addSlide"><div><img src="./img/slide_00.jpg" alt="">
+                                                          <span><a href="#" title="자세히 보기">자세히 보기</a></span></div></li>
+                            <li class="slide slide2"><div><img src="./img/slide_01.jpg" alt="">
+                                                          <span><a href="#" title="자세히 보기">자세히 보기</a></span></div></li>
+                            <li class="slide slide3"><div><img src="./img/slide_02.jpg" alt="">
+                                                          <span><a href="#" title="자세히 보기">자세히 보기</a></span></div></li>
+                            <li class="slide slide4"><div><img src="./img/slide_03.jpg" alt="">
+                                                          <span><a href="#" title="자세히 보기">자세히 보기</a></span></div></li>
+                            <li class="slide slide1"><div><img src="./img/slide_00.jpg" alt="">
+                                                          <span><a href="#" title="자세히 보기">자세히 보기</a></span></div></li>
+                        </ul>
+                    </div>
+                    <!-- 좌우 화살버튼-->
+                    <span class="next-btn-wrap"><a href="javascript:void(0);" class="next-btn blind" title="Next Button">Next Button</a></span>
+                    <span class="prev-btn-wrap"><a href="javascript:void(0);" class="prev-btn blind" title="Preview Button">Preview Button</a></span>
+                    <!-- 페이지버튼(indigate) -->
+                    <ul class="page-btn-wrap">
+                        <li><div><a href="javascript:void(0);" class="pause-play-btn blind" title="Pause Play Button" >Pause Play Button</a></div></li>
+                        <li><div><a href="javascript:void(0);" class="page-btn blind addPagebtn" title="Page0 Button" >Page0 Button</a></div></li>
+                        <li><div><a href="javascript:void(0);" class="page-btn blind" title="Page1 Button" >Page1 Button</a></div></li>
+                        <li><div><a href="javascript:void(0);" class="page-btn blind" title="Page2 Button" >Page2 Button</a></div></li>
+                        <li><div><a href="javascript:void(0);" class="page-btn blind" title="Page3 Button" >Page3 Button</a></div></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="section4">
+            <h2 class="hide">섹션</h2>
+            <!-- 전체너비 1100px, 왼쪽 176px+여백44px=220px, 오른쪽 880px로 재설정 -->
+            <div class="wrap fixedclear">
+                <div class="left">
+                    <div class="left-wrap"><img src="./img/rewards-logo.png" alt="스타벅스 리워즈"></div>
+                </div>
+                <div class="right">
+                    <div class="right-wrap">
+                        <h2>스타벅스만의 특별한 혜택, <strong>스타벅스 리워드</strong></h2>
+                        <div class="right-row2 fixedclear">
+                            <div class="right-row2-left">
+                                <h3><strong>스타벅스 회원이세요?</strong> 로그인을 통해 나만의 리워드를 확인해보세요.<br>
+                                    <strong>스타벅스 회원이 아니세요?</strong> 가입을 통해 리워드 혜택을 즐기세요.</h3>
+                            </div>
+                            <div class="right-row2-right">
+                                <div>
+                                    <span><a href="#" class="member-join">회원가입</a></span>
+                                    <span><a href="#" class="member-login">로그인</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="right-row3 fixedclear">
+                            <div class="right-row3-left">
+                                <h4>회원 가입 후, 스타벅스 e-Gift Card를 <strong>"나에게 선물하기"로 구매하시고, 편리하게 등록하세요!</strong><br>
+                                    카드를 등록하여 스타벅스 리워드 회원이 되신 후, 첫 구매를 하시면 무료 음료쿠폰을 드립니다!</h4>
+                            </div>
+                        <div class="right-row3-right">
+                            <div>
+                                <span><a href="#" class="e-gift">e-Gift Card 선물하기</a></span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="section5">
+            <h2 class="hide">섹션</h2>
+            <div class="wrap fixedclear">
+                <div class="left">
+                    <img src="./img/20_autumn1_bean.png" alt="콜롬비아 산탄데르">
+                </div>
+                <div class="right">
+                    <h2><img src="./img/20_autumn1_bean_txt.png" alt="가을의 시작을 알려줄 콜롬비아 산텐데르"/></h2>
+                    <span><a href="#" class="view-btn" title="자세히 보기">자세히 보기</a></span>
+                </div>
+            </div>
+        </section>
+        <section id="section6">
+            <h2 class="hide">섹션</h2>
+            <div class="wrap fixedclear">
+                <span class="img-wrap"><img src="./img/reserve_xmas_beans.png" alt="christmas 2020"></span>
+                <span class="btn-wrap"><a href="#" title="more-view">자세히보기</a></span>
+            </div>
+        </section>
+        <section id="section7">
+            <h2 class="hide">섹션</h2>
+            <div class="wrap">
+                <h2><img src="./img/fav_prod_txt01.png" alt="할로윈푸드1"></h2>
+                <h3><img src="./img/fav_prod_txt02.png" alt="할로윈푸드2"></h3>
+                <p><span class="btn-wrap"><a href="#" class="view-btn" title="자세히 보기">자세히 보기</a></span></p>
+                <span class="fav-wrap"><img src="./img/2020_halloween_fav.png" alt=""></span>
+            </div>
+        </section>
+        <section id="section8">
+            <h2 class="hide">섹션</h2>
+            <div class="wrap">
+                <img class="img" src="./img/reserve_visual_pc.png" alt="">
+                <i class="v-line"></i>
+                <i class="h-line"></i>
+                <span class="title-01"><img src="./img/reserve_text_pc.png" alt=""></span>
+                <span class="title-02"><a href="#" class="blind" title="EXPLORE OUR STORY">EXPLORE OUR STORY</a></span>
+            </div>
+        </section>
+        <section id="section9">
+            <h2 class="hide">섹션</h2>
+            <div class="wrap">
+                <div class="left-img-wrap">
+                    <span class="img-01">
+                        <img src="./img/store_exp_img02.png" alt="스타벅스 매장 내부 전경 이미지">
+                    </span>
+                    <span class="img-02">
+                        <img src="./img/store_exp_img01.png" alt="스타벅스 드라이브 스루">
+                    </span>
+                </div>
+
+                <div class="right-title-wrap">
+                    <span class="title-01">
+                        <img src="./img/store_txt01.png" alt="스타벅스를 경험해보세요...">
+                    </span>
+                    <span class="title-02">
+                        <img src="./img/store_txt02.png" alt="차별화된 경험을 누릴수 있는 리저브매장...">
+                    </span>
+                    <span class="store-find-wrap">
+                        <a href="#" title="매장 찾기">매장 찾기</a>
+                    </span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <h2 class="hide">섹션</h2>
+        <div class="row row1">
+            <div class="wrap">
+                <ul class="fixedclear">
+                    <li>
+                        <dl>
+                            <dt><a href="#" title="COMPANY">COMPANY</a></dt>
+                            <dd><a href="#" title="한눈에 보기">한눈에 보기</a></dd>
+                            <dd><a href="#" title="스타벅스 사명">스타벅스 사명</a></dd>
+                            <dd><a href="#" title="스타벅스 소개">스타벅스 소개</a></dd>
+                            <dd><a href="#" title="국내 뉴스룸">국내 뉴스룸</a></dd>
+                            <dd><a href="#" title="세계의 스타벅스">세계의 스타벅스</a></dd>
+                            <dd><a href="#" title="글로벌 뉴스룸">글로벌 뉴스룸</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="#" title="COMPANY">COMPANY</a></dt>
+                            <dd><a href="#" title="한눈에 보기">한눈에 보기</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="#" title="COMPANY">COMPANY</a></dt>
+                            <dd><a href="#" title="한눈에 보기">한눈에 보기</a></dd>
+                            <dd><a href="#" title="스타벅스 사명">스타벅스 사명</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="#" title="COMPANY">COMPANY</a></dt>
+                            <dd><a href="#" title="한눈에 보기">한눈에 보기</a></dd>
+                            <dd><a href="#" title="스타벅스 사명">스타벅스 사명</a></dd>
+                            <dd><a href="#" title="스타벅스 소개">스타벅스 소개</a></dd>
+                            <dd><a href="#" title="국내 뉴스룸">국내 뉴스룸</a></dd>
+                            <dd><a href="#" title="세계의 스타벅스">세계의 스타벅스</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="#" title="COMPANY">COMPANY</a></dt>
+                            <dd><a href="#" title="한눈에 보기">한눈에 보기</a></dd>
+                            <dd><a href="#" title="스타벅스 사명">스타벅스 사명</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row row2">
+            <div class="wrap">
+                <ul class="fixedclear">
+                    <li><a href="#" title=""><img src="./img/footer_award17_01.jpg" alt="footer_award17_01"></a></li>
+                    <li><a href="#" title=""><img src="./img/footer_award17_02.jpg" alt="footer_award17_02"></a></li>
+                    <li><a href="#" title=""><img src="./img/footer_award17_03.jpg" alt="footer_award17_03"></a></li>
+                    <li><a href="#" title=""><img src="./img/footer_award17_04.jpg" alt="footer_award17_04"></a></li>
+                    <li><a href="#" title=""><img src="./img/footer_award17_05.jpg" alt="footer_award17_05"></a></li>
+                    <li><a href="#" title=""><img src="./img/footer_award17_06.jpg" alt="footer_award17_06"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row row3">
+            <div class="wrap">
+                <ul>
+                    <li>
+                        <span><a href="#">개인정보처리방침</a></span><span><i></i></span>
+                        <span><a href="#">영상정보처리기기 운영관리 방침</a></span><span><i></i></span>
+                        <span><a href="#">홈페이지 이용약관</a></span><span><i></i></span>
+                        <span><a href="#">위치정보 이용약관</a></span><span><i></i></span>
+                        <span><a href="#">스타벅스 카드 이용약관</a></span><span><i></i></span>
+                        <span><a href="#">비회원 이용약관</a></span><span><i></i></span>
+                        <span><a href="#">My DT Pass 서비스 이용약관</a></span><span><i></i></span>
+                        <span><a href="#">윤리경영 핫라인</a></span><span><i></i></span>
+                    </li>
+                    
+                    <li>
+                        <span><a href="#">찾아오시는 길</a></span>
+                        <span><a href="#">신규입점제의</a></span>
+                        <span><a href="#">사이트 맵</a></span>
+                    </li>
+
+                    <li>
+                        <address>
+                            <span>사업자등록번호 : 201-81-21515</span><span><i></i></span>
+                            <span>(주)스타벅스커피 코리아 대표이사 : 송 데이비드 호섭</span><span><i></i></span>
+                            <span>TEL : 1522-3232</span><span><i></i></span>
+                            <span>개인정보 책임자 : 장석현</span>
+                        </address>
+                    </li>
+                    <li>
+                        <span>&copy; 2020 Starbucks Coffee Company. All Rights Reserved.</span>
+                            <!--👆 = ⓒ -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="quick">
+        <span>
+            <a href="https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=1761" target="_self" title="2020년 크리스마스 프리퀀시에 참여해보세요."><img src="./img/badge_efreq_pc_2020winter.png" alt="자세히 보기"></a>
+            <a href="https://www.starbucks.co.kr/plcc/promotionView.do?eventCode=STH02"   target="_self" title="스타벅스+현대카드"><img src="./img/plcc_badge_pc.png" alt="hyndaicard + starbucks"></a>
+        </span>
+    </div>
+    <div class="go-top">
+        <a href="#wrap" class="gotop-btn" title="go-top"><img src="./img/btn_prom_up.png" alt="go-top"></a>
+            <!-- 지금 헤더가 fixed인 상태라 top값 없음  -->
+    </div>
+    <div class="w3c-html5">
+            <a href="http://validator.kldp.org/check?uri=referer"
+              onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))">
+              <img src="http://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80"></a>
+
+            <a href="http://css-validator.kldp.org/check/referer">
+                <img style="border:0;width:80px;height:15px"
+                    src="http://css-validator.kldp.org/images/validate/css-blue"
+                    alt="올바른 CSS입니다!" />
+            </a>  
+    </div>
+
+    <!-- 웹 개발 스크립트 -->
+    <script src="./js/header.js"></script>
+    <script src="./js/section1.js"></script>
+    <!-- <script src="./js/section2.js"></script> -->
+    <script src="./js/section2-3.js"></script>
+    <script src="./js/section3.js"></script>
+    <script src="./js/section5.js"></script>
+    <script src="./js/section6.js"></script>
+    <script src="./js/section7.js"></script>
+    <script src="./js/section8.js"></script>
+    <script src="./js/section9.js"></script>
+    <script src="./js/goTop.js"></script>
+
+
+</div>
+</body>
+</html>

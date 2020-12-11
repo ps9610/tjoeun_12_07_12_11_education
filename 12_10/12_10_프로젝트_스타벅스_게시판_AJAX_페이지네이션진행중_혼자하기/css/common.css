@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+* {margin:0;padding:0;vertical-align:middle;border:0;}
+html, body {width:100%; height:100%;}
+html {overflow-y:scroll;}
+body {font:normal 14px/1 "Nanum Gothic","Noto Sans KR";color:#444;background:#fff;}
+                         /*  1차글꼴   ,    2차글꼴  */
+header, main, footer, section, aside, nav, aside {display: block;}
+i, em, address {font-style:normal;} /* |가 반듯하게 되게 함*/ 
+
+ul, li {list-style: none;}
+a {color: #444; text-decoration: none;}
+h1, h2, h3, h4, h5, h6 {font-weight:normal; font-size:14px;}
+img {vertical-align:middle;}
+.fixedclear:after {content: "";display:block;clear:both;} /* floating hack */
+.hide {display: none;}
+.blind{display:block;text-indent:-2000px;overflow:hidden;}/*text-indent는 블럭요소일때만 가능*/
+
+/* skip */
+#skip {z-index:2;position:absolute;top:0;left:0;width:100%;}
+#skip > li {width:100%;}
+#skip > li > a {display:block;line-height:0;font-size:0;text-align:center;color:#fff;background:#333;text-decoration:underline;}
+#skip > li > a:focus {line-height:60px;font-size:20px;}
